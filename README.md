@@ -9,7 +9,8 @@
 1.  [Let and Const](Syntax/01-let_and_const.md)
 2.  [Template Laterals](Syntax/02-template_literals.md)
 3.  [Destructuring](Syntax/03-destructuring.md)
-4.  ...
+4.  [Object Literal Shorthand](Syntax/04-object_literal_shorthand.md)
+5.  ...
 
 ## Reference
 
