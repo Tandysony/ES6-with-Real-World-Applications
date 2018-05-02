@@ -7,7 +7,7 @@
 ## Table of Contents
 
 1.  [Let and Const](Syntax/01-let_and_const.md)
-2.  TODO
+2.  [Template Laterals](Syntax/02-template_literals.md)
 3.  ...
 
 ## Reference
