@@ -88,3 +88,124 @@ for (const index in digits) {
 Gross! This is why `for...in` loops **_are discouraged_** when looping over arrays.
 
 > **NOTE:** The `forEach` loop is another type of for loop in JavaScript. However, `forEach()` is actually **_an array method_**, so it can only be used exclusively with arrays. There is also _no way to stop or break_ a `forEach` loop. If you need that type of behavior in your loop, you’ll have to use a basic for loop.
+
+Finally, we have the mighty `for...of` loop.
+
+### The `for...of` loop
+
+The `for...of` loop is used to loop over any type of data that is iterable.
+
+You write a `for...of` loop almost exactly like you would write a `for...in` loop, except you swap out `in` with `of` and you can **_drop the index_**.
+
+```js
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (const digit of digits) {
+  // <-- using 'const' & 'of'
+  console.log(digit);
+}
+```
+
+> **print：**  
+> 0  
+> 1  
+> 2  
+> 3  
+> 4  
+> 5  
+> 6  
+> 7  
+> 8  
+> 9
+
+This makes the `for...of` loop the most concise version of all the for loops.
+
+> **TIP:** It’s good practice to use plural names for objects that are collections of values. That way, when you loop over the collection, you can use the singular version of the name when referencing individual values in the collection. For example, `for (const button of buttons) {...}`.
+
+But wait, there’s more! The `for...of` loop also has some additional benefits that fix the weaknesses of the for and `for...in` loops.
+
+You can **_stop or break_** a `for...of` loop at anytime.
+
+```js
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (const digit of digits) {
+  if (digit % 2 === 0) {
+    // break the loop for odd numbers
+    continue;
+  }
+  console.log(digit);
+}
+```
+
+> **print：**  
+> 1  
+> 3  
+> 5  
+> 7  
+> 9
+
+And you don’t have to worry about adding new properties to objects. The `for...of` loop will **_only loop over the values in the object_**.
+
+```js
+Array.prototype.decimalfy = function() {
+  for (i = 0; i < this.length; i++) {
+    this[i] = this[i].toFixed(2);
+  }
+};
+
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (const digit of digits) {
+  console.log(digit);
+}
+```
+
+> **print：**  
+> 0  
+> 1  
+> 2  
+> 3  
+> 4  
+> 5  
+> 6  
+> 7  
+> 8  
+> 9
+
+## Quiz
+
+Write a `for...of` loop that:
+
+* loops through each day in the days array
+* capitalizes the first letter of the day
+* and prints the day out to the console
+
+Your code should log the following to the console:
+
+> Sunday  
+> Monday  
+> Tuesday  
+> Wednesday  
+> Thursday  
+> Friday  
+> Saturday
+
+The code:
+
+```js
+const days = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday"
+];
+
+for (let day of days) {
+  day = day.charAt(0).toUpperCase() + day.substr(1);
+  console.log(day);
+}
+```

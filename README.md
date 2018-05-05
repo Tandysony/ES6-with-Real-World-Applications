@@ -10,7 +10,8 @@
 2.  [Template Laterals](Syntax/02-template_literals.md)
 3.  [Destructuring](Syntax/03-destructuring.md)
 4.  [Object Literal Shorthand](Syntax/04-object_literal_shorthand.md)
-5.  ...
+5.  [Iteration - For Loops](Syntax/05-iteration.md)
+6.  ...
 
 ## Reference
 
