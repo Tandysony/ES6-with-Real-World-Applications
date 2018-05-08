@@ -12,7 +12,8 @@
 4.  [Object Literal Shorthand](Syntax/04-object_literal_shorthand.md)
 5.  [Iteration - For Loops](Syntax/05-iteration.md)
 6.  [Spread Operator](Syntax/06-spread_operator.md)
-7.  ...
+7.  [Reset Parameter](Syntax/07-reset_parameter.md)
+8.  ...
 
 ## Reference
 
