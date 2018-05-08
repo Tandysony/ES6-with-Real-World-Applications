@@ -11,7 +11,8 @@
 3.  [Destructuring](Syntax/03-destructuring.md)
 4.  [Object Literal Shorthand](Syntax/04-object_literal_shorthand.md)
 5.  [Iteration - For Loops](Syntax/05-iteration.md)
-6.  ...
+6.  [Spread Operator](Syntax/06-spread_operator.md)
+7.  ...
 
 ## Reference
 
