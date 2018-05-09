@@ -13,7 +13,8 @@
 5.  [Iteration - For Loops](Syntax/05-iteration.md)
 6.  [Spread Operator](Syntax/06-spread_operator.md)
 7.  [Reset Parameter](Syntax/07-reset_parameter.md)
-8.  ...
+8.  [Arrow Functions](Functions/08-arrow_functions.md)
+9.  ...
 
 ## Reference
 
