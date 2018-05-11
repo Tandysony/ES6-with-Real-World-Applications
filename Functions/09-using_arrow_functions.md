@@ -12,7 +12,7 @@ One confusing syntax is when an arrow function is stored in a variable.
 const greet = name => `Hello ${name}!`; // with template literals
 ```
 
-In the code above, the arrow function is stored in the greet variable and you'd call it like this:
+In the code above, the arrow function is stored in the `greet` variable and you'd call it like this:
 
 ```js
 greet("Asser");
@@ -28,7 +28,7 @@ You might have noticed the arrow function from the `greet()` function looks like
 name => `Hello ${name}!`;
 ```
 
-If you recall, the parameter list appears before the arrow function's arrow (i.e. `=>`). If there's **only one parameter** in the list, then you can write it just like the example above. But, if there are **two or more items** in the parameter list, or if there are **zero items** in the list, then you need to wrap the list in parentheses:
+If you recall, the parameter list appears _before_ the arrow function's arrow (i.e. `=>`). If there's **only one parameter** in the list, then you can write it just like the example above. But, if there are **two or more items** in the parameter list, or if there are **zero items** in the list, then you need to wrap the list in parentheses:
 
 ```js
 // empty parameter list requires parentheses
@@ -148,21 +148,6 @@ Option 3 **doesn't have curly braces**. This means it needs to be in the concise
 
 Option 4 is correct. This is the most common way you'll see arrow functions written—as one-liners that automatically return.
 
-## Sumup
-
-So arrow functions are awesome!
-
-* The syntax is a lot shorter,
-* it's easier to write and read short, single-line functions,
-* and they automatically return when using the **concise body syntax**!
-
-> **WARNING:** Everything's not all ponies and rainbows though, and there are definitely times when you might _not_ want to use an arrow function. So before you wipe from your memory how to write a traditional function, check out these implications:
->
-> * there's a gotcha with the `this` keyword in arrow functions
->   * go to the next lesson to find out the details!
-> * arrow functions are only _expressions_
->   * there's no such thing as an arrow function declaration
-
 ## Quiz 3
 
 Convert the function passed to the `map()` method into an arrow function.
@@ -186,3 +171,18 @@ console.log(...squares);
 ```
 
 > **Prints:** 1 4 9 16 25 36 49 64 81 100
+
+## Recap
+
+So arrow functions are awesome!
+
+* The syntax is a lot shorter,
+* it's easier to write and read short, single-line functions,
+* and they automatically return when using the **concise body syntax**!
+
+> **WARNING:** Everything's not all ponies and rainbows though, and there are definitely times when you might _not_ want to use an arrow function. So before you wipe from your memory how to write a traditional function, check out these implications:
+>
+> * there's a gotcha with the `this` keyword in arrow functions
+>   * go to the next lesson to find out the details!
+> * arrow functions are only _expressions_
+>   * there's no such thing as an arrow function declaration
