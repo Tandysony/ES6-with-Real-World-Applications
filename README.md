@@ -1,6 +1,6 @@
 # Learn to use ECMAScript 6
 
-* Suo (Tandy) Tan
+* Tandy Suo Tan
 
 ### Lecture notes taken for the Udacity course: [ES6 - JavaScript Improved](https://www.udacity.com/course/es6-javascript-improved--ud356)
 
@@ -16,7 +16,8 @@
 8.  [Arrow Functions](Functions/08-arrow_functions.md)
 9.  [Using Arrow Functions](Functions/09-using_arrow_functions.md)
 10. ["this" and Regular Functions](Functions/10-this_and_regular_functions.md)
-11. ...
+11. ["this" and Arrow Functions](Functions/11-this_and_arrow_functions.md)
+12. ...
 
 ## Reference
 
