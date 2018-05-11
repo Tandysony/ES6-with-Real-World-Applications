@@ -15,7 +15,8 @@
 7.  [Reset Parameter](Syntax/07-reset_parameter.md)
 8.  [Arrow Functions](Functions/08-arrow_functions.md)
 9.  [Using Arrow Functions](Functions/09-using_arrow_functions.md)
-10. ...
+10. ["this" and Regular Functions](Functions/10-this_and_regular_functions.md)
+11. ...
 
 ## Reference
 
