@@ -18,7 +18,8 @@
 10. ["this" and Regular Functions](Functions/10-this_and_regular_functions.md)
 11. ["this" and Arrow Functions](Functions/11-this_and_arrow_functions.md)
 12. [Default Function Parameters](Functions/12-default_function_parameters.md)
-13. ...
+13. [Defaults and Destructuring](Functions/13-default_and_destructuring.md)
+14. ...
 
 ## Reference
 
