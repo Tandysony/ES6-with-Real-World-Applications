@@ -47,7 +47,7 @@ createGrid(); // Generates a 5 x 5 grid
 
 > **Returns:** Generates a 5 x 5 grid
 
-### Quiz
+### Quiz 1
 
 Take a look at the following code:
 
@@ -129,7 +129,7 @@ createSundae(); // Your sundae has 1 scoop with Hot Fudge toppings.
 
 > **Returns:** Your sundae has 1 scoop with Hot Fudge toppings.
 
-### Quiz
+### Quiz 2
 
 Take a look at the following code:
 
@@ -197,3 +197,34 @@ createSundae([undefined, ["Hot Fudge", "Sprinkles", "Caramel"]]);
 Since **arrays are positionally based**, we have to **pass `undefined` to "skip" over the first argument** (and accept the default) to get to the second argument.
 
 Unless you've got a strong reason to use array defaults with array destructuring, we recommend **_going with object defaults with object destructuring_**!
+
+## Quiz 3
+
+Create a `buildHouse()` function that accepts an object as a default parameter. The object should set the following properties to these default values:
+
+```js
+floors = 1;
+color = "red";
+walls = "brick";
+```
+
+The function should return the following if no arguments or any empty object is passed to the function.
+
+> Your house has 1 floor(s) with red brick walls.
+
+Your code:
+
+```js
+function buildHouse({floors:1, color:"red", walls="brick"} = {}){
+  return `Your house has ${floors} floor(s) with ${color} ${walls} walls.`
+}
+
+console.log(buildHouse());
+console.log(buildHouse({}));
+console.log(buildHouse({floors: 3, color: 'yellow'}));
+```
+
+> **Prints:**  
+> Your house has 1 floor(s) with red brick walls.  
+> Your house has 1 floor(s) with red brick walls.  
+> Your house has 3 floor(s) with yellow brick walls.
