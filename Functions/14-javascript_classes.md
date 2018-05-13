@@ -106,3 +106,84 @@ tpeof Animal === 'function'
 > Option 1 is correct. Methods that appear in the class definition are, under the hood, placed on that class's prototype object.  
 > Option 2 is not correct. A class is actually just a function.  
 > Option 3 is correct. A class is a function.
+
+## Static methods
+
+To add a static method, the keyword `static` is placed in front of the method name. Look at the `badWeather()` method in the code below.
+
+```js
+class Plane {
+  constructor(numEngines) {
+    this.numEngines = numEngines;
+    this.enginesActive = false;
+  }
+
+  static badWeather(planes) {
+    for (plane of planes) {
+      plane.enginesActive = false;
+    }
+  }
+
+  startEngines() {
+    console.log("starting engines…");
+    this.enginesActive = true;
+  }
+}
+```
+
+See how `badWeather()` has the word `static` in front of it while `startEngines()` doesn't? That makes `badWeather()` a method that's accessed directly on the `Plane` class, so you can call it like this:
+
+```js
+Plane.badWeather([plane1, plane2, plane3]);
+```
+
+> **NOTE:** A little hazy on how constructor functions, class methods, or prototypal inheritance works? Check out this course [Object Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015).
+
+## Benefits of classes
+
+1.  Less setup
+
+    * There's a lot less code that you need to write to create a function
+
+2.  Clearly defined constructor function
+
+    * Inside the class definition, you can clearly specify the constructor function.
+
+3.  Everything's contained
+    * All code that's needed for the class is contained in the class declaration. Instead of having the constructor function in one place, then adding methods to the prototype one-by-one, you can do everything all at once!
+
+## Things to look out for when using classes
+
+1.  `class` is not magic
+
+    * The `class` keyword brings with it a lot of mental constructs from other, class-based languages. It doesn't magically add this functionality to JavaScript classes.
+
+2.  `class` is a mirage over prototypal inheritance
+
+    * Under the hood, a JavaScript class just uses prototypal inheritance.
+
+3.  Using classes requires the use of `new`
+
+    * When creating a new instance of a JavaScript class, the `new` keyword must be used, otherwise code like the following will throw a `Uncaught TypeError`.
+
+    ```js
+    class Toy {
+      ...
+    }
+
+    const myToy1 = Toy(); // throws an error without the `new` keyword
+    ```
+
+    > **Uncaught TypeError:** Class constructor Toy cannot be invoked without 'new'
+
+4)  `class` declarations are NOT hoisted
+
+    * function declarations are hoisted and class declarations are not. You **_first need to declare your class and then access it_**, otherwise code like the following will throw a `ReferenceError`.
+
+    ```js
+    var p = new Rectangle(); // ReferenceError
+
+    class Rectangle {}
+    ```
+
+    > **Uncaught ReferenceError:** Rectangle is not defined
