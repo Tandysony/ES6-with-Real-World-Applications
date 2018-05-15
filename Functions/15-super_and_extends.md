@@ -98,3 +98,93 @@ myMaple.changeSeason("spring");
 ```
 
 Both this code and the class-style code above achieve the same functionality.
+
+## Working with subclasses
+
+Like most of the new additions, there's a lot less setup code and it's a lot cleaner syntax to create a subclass using `class`, `super`, and `extends`.
+
+Just remember that, under the hood, the same connections are made between functions and prototypes.
+
+### `super` must be called before `this`
+
+In a subclass constructor function, before `this` can be used, a call to the `super` class **must be made**.
+
+```js
+class Apple {}
+class Gala extends Apple {
+  constructor(tartnessLevel, energy) {
+    this.tartnessLevel = tartnessLevel; // `this` before `super` will throw an error!
+    super(energy);
+  }
+}
+```
+
+## Quiz
+
+1.  Take a look at the following code:
+
+    ```js
+    class Toy {}
+    class Dragon extends Toy {}
+    const myDragon = new Dragon();
+    ```
+
+    Given the code above, is the following statement true or false?
+
+    ```js
+    myDragon instanceof Toy;
+    ```
+
+    > true
+
+    > The `myDragon` variable is an object created by the `Dragon` class, and since the `Dragon` class extends the `Toy` class, `myDragon` is also considered an instance of `Toy`.
+
+2.  Let's say that a `Toy` class exists and that a `Dragon` class extends the `Toy` class.
+
+    What is the correct way to create a `Toy` object from inside the `Dragon` class's constructor method?
+
+    ```js
+    /* option 1 */
+    super();
+
+    /* option 2 */
+    super.call(this);
+
+    /* option 3 */
+    parent();
+
+    /* option 4 */
+    Toy();
+    ```
+
+    > Option 1 is the correct way to call the `super` class from within the subclass's constructor function.
+
+3.  **Question:**
+
+    Create a `Bicycle` subclass that extends the `Vehicle` class. The `Bicycle` subclass should override Vehicle's constructor function by changing the default values for `wheels` from `4` to `2` and `horn` from `'beep beep'` to `'honk honk'`.
+
+    ```js
+    class Vehicle {
+      constructor(color = blue, wheels = 4, horn = "beep beep") {
+        this.wheels = wheels;
+        this.horn = horn;
+      }
+
+      honkHork() {
+        console.log(this.horn);
+      }
+    }
+
+    class Bicycle extends Vehicle {
+      constructor(wheels = 2, horn = "honk honk") {
+        super(wheels, horn);
+        this.wheels = wheels;
+        this.horn = horn;
+      }
+    }
+
+    const myVehicle = new Vehicle();
+    myVehicle.honkHorn(); /* beep beep  */
+    const myBike = new Bicycle();
+    myBike.honkHorn(); /* honk honk */
+    ```
