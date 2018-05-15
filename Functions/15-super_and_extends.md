@@ -176,8 +176,9 @@ class Gala extends Apple {
     }
 
     class Bicycle extends Vehicle {
-      constructor(wheels = 2, horn = "honk honk") {
+      constructor(color = "red", wheels = 2, horn = "honk honk") {
         super(wheels, horn);
+        this.color = color;
         this.wheels = wheels;
         this.horn = horn;
       }
