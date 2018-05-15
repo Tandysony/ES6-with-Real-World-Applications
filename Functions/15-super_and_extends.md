@@ -165,12 +165,12 @@ class Gala extends Apple {
 
     ```js
     class Vehicle {
-      constructor(color = blue, wheels = 4, horn = "beep beep") {
+      constructor(color = "blue", wheels = 4, horn = "beep beep") {
         this.wheels = wheels;
         this.horn = horn;
       }
 
-      honkHork() {
+      honkHorn() {
         console.log(this.horn);
       }
     }
@@ -189,3 +189,7 @@ class Gala extends Apple {
     const myBike = new Bicycle();
     myBike.honkHorn(); /* honk honk */
     ```
+
+    > **Prints:**  
+    > beep beep  
+    > honk honk
