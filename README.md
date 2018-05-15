@@ -20,7 +20,8 @@
 12. [Default Function Parameters](Functions/12-default_function_parameters.md)
 13. [Defaults and Destructuring](Functions/13-default_and_destructuring.md)
 14. [Javascript Classes](Functions/14-javascript_classes.md)
-15. ...
+15. [Super and Extends](Functions/15-super_and_extends.md)
+16. ...
 
 ## Reference
 
