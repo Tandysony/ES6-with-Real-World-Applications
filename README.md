@@ -21,7 +21,9 @@
 13. [Defaults and Destructuring](Functions/13-default_and_destructuring.md)
 14. [Javascript Classes](Functions/14-javascript_classes.md)
 15. [Super and Extends](Functions/15-super_and_extends.md)
-16. ...
+16. [Symbols](Built-ins/16-symbols.md)
+17. [Iteration & Iterable Protocols](Built-ins/17-iterations_&_iterable_protocols.md)
+18. ...
 
 ## Reference
 
