@@ -25,7 +25,8 @@
 17. [Iteration & Iterable Protocols](Built-ins/17-iterations_&_iterable_protocols.md)
 18. [Sets](Built-ins/18-sets.md)
 19. [Working with Sets](Built-ins/19-working_with_sets.md)
-20. ...
+20. [WeakSets](Built-ins/20-weaksets.md)
+21. ...
 
 ## Reference
 
