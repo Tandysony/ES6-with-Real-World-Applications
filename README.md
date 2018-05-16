@@ -23,7 +23,8 @@
 15. [Super and Extends](Functions/15-super_and_extends.md)
 16. [Symbols](Built-ins/16-symbols.md)
 17. [Iteration & Iterable Protocols](Built-ins/17-iterations_&_iterable_protocols.md)
-18. ...
+18. [Sets](Built-ins/18-sets.md)
+19. ...
 
 ## Reference
 
