@@ -33,7 +33,7 @@ Basically, a Set is an object that lets you store unique items. You can add item
 
 ## How to Create a Set
 
-There’s a couple of different ways to create a Set. The first way, is pretty straightforward, using the `Set()` keyword:
+There’s a couple of different ways to create a Set. The first way, is pretty straightforward, use `new Set()`:
 
 ```js
 const games = new Set();
@@ -92,3 +92,38 @@ Select the collections below that represent a Set in JavaScript.
 ```
 
 A set is an object that has no repeating values. Therefore, option 1, 2 and 5 are correct.
+
+## Modifying Sets
+
+After you’ve created a **Set**, you’ll probably want to _add_ and _delete_ items from the Set. So how do you that? You use the appropriately named, `.add()` and `.delete()` methods:
+
+```js
+const games = new Set([
+  "Super Mario Bros.",
+  "Banjo-Kazooie",
+  "Mario Kart",
+  "Super Mario Bros."
+]);
+
+games.add("Banjo-Tooie");
+games.add("Age of Empires");
+games.delete("Super Mario Bros.");
+
+console.log(games);
+```
+
+> **Prints:**  
+> `Set(4) {"Banjo-Kazooie", "Mario Kart", "Banjo-Tooie", "Age of Empires"}`
+
+On the other hand, if you want to **delete all the items** from a Set, you can use the `.clear()` method.
+
+```js
+games.clear():
+```
+
+> **Prints:**  
+> `Set(0) {}`
+
+> **TIP:** If you attempt to `.add()` a duplicate item to a Set, you won’t receive an error, but the item will not be added to the Set. Also, if you try to `.delete()` an item that is not in a Set, you won’t receive an error, and the Set will remain unchanged.
+>
+> `.add()` returns the Set if an item is successfully added. On the other hand, `.delete()` returns a **Boolean** (`true` or `false`) depending on successful deletion.
