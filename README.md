@@ -29,7 +29,9 @@
 21. [Maps](Built-ins/21-maps.md)
 22. [Working with Maps](Built-ins/22-working_with_maps.md)
 23. [WeakMaps](Built-ins/23-weakmaps.md)
-24. ...
+24. [Promises](Built-ins/24-promises.md)
+25. [More on Promises](Built-ins/25-more_on_promises.md)
+26. ...
 
 ## Reference
 
