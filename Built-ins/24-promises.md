@@ -16,7 +16,7 @@ For example:
 
 ```js
 new Promise(function(resolve, reject) {
-  windows.setTimeout(function createSundae(flavor = "chocolate") {
+  window.setTimeout(function createSundae(flavor = "chocolate") {
     const sundae = {};
     // request ice cream
     // get cone
@@ -34,7 +34,7 @@ But once that's all done, how does JavaScript notify us that it's finished and r
 
 ```js
 new Promise(function(resolve, reject) {
-  windows.setTimeout(function createSundae(flavor = "chocolate") {
+  window.setTimeout(function createSundae(flavor = "chocolate") {
     const sundae = {};
     // request ice cream
     // get cone
