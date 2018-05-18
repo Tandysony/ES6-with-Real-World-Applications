@@ -28,7 +28,8 @@
 20. [WeakSets](Built-ins/20-weaksets.md)
 21. [Maps](Built-ins/21-maps.md)
 22. [Working with Maps](Built-ins/22-working_with_maps.md)
-23. ...
+23. [WeakMaps](Built-ins/23-weakmaps.md)
+24. ...
 
 ## Reference
 
