@@ -34,3 +34,4 @@
 ## Reference
 
 * [ES6 Specification](http://www.ecma-international.org/ecma-262/6.0/)
+* [JavaScript Promises by Google](https://www.udacity.com/course/javascript-promises--ud898)
