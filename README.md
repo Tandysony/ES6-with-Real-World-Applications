@@ -32,7 +32,8 @@
 24. [Promises](Built-ins/24-promises.md)
 25. [More on Promises](Built-ins/25-more_on_promises.md)
 26. [Proxies](Built-ins/26-proxies.md)
-27. ...
+27. [Generators](Built-ins/27-generators.md)
+28. ...
 
 ## Reference
 
