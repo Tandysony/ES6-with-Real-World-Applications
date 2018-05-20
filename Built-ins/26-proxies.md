@@ -194,3 +194,18 @@ proxyObj.weight; // logs 'getting the weight property' & 120
 See that?!? A `weight` property was added to the proxy object, and when it was later retrieved, **it displayed a log message**!
 
 So some functionality of proxy objects may seem similar to existing ES5 getter/setter methods. But with proxies, you do not need to initialize the object with getters/setters for each property when the object is initialized.
+
+## Proxies Recap
+
+A proxy object sits between _a real object_ and _the calling code_. The _calling code_ **interacts with the proxy** instead of the real object. To create a proxy:
+
+* use the `new Proxy()` constructor
+
+  * pass the object being proxied as the first item
+  * the second object is a handler object
+
+* the handler object is made up of 1 of [13 different "traps"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
+* a trap is a function that will intercept calls to properties let you run code
+* if a trap is not defined, the default behavior is sent to the target object
+
+`Proxies are a powerful new way to create and manage the interactions between objects.`
