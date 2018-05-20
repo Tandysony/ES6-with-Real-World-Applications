@@ -208,4 +208,4 @@ A proxy object sits between _a real object_ and _the calling code_. The _calling
 * a trap is a function that will intercept calls to properties let you run code
 * if a trap is not defined, the default behavior is sent to the target object
 
-`Proxies are a powerful new way to create and manage the interactions between objects.`
+`Proxies are a powerful new way to **create and manage the interactions between objects**.`
