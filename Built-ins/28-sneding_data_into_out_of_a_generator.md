@@ -117,6 +117,11 @@ The `toppings` array will have `undefined` as its last item. And the first-time 
 
 Because the first call to `.next()` passes in the data `"hot funge"`. But **_that data doesn't get stored anywhere_**. The last call to `.next()` should have some data since it's being yielded into the last call to `toppings.push()`.
 
-Generators are a powerful new kind of function that is able to _pause its execution while also maintaining its own state_. **Generators are great for iterating over a list of items one at a time so you can handle each item on its own before moving on to the next one**. You can also use generators to handle nested callbacks. For example, let's say that an app needs to get a list of all repositories and the number of times they've been starred. Well, before you can get the number of stars for each repository, you'd need to get the user's information. Then after retrieving the user's profile the code can then take that information to find all of the repositories.
+Generators are a powerful new kind of function that is able to _pause its execution while also maintaining its own state_.
 
-Generators will also be used heavily in upcoming additions to the JavaScript language. One upcoming feature that will make use of them is async functions.
+* Generators are great for **iterating over a list of items _one at a time_ so you can _handle each item on its own_ before moving on to the next one**.
+* You can also use generators to **handle nested callbacks**.
+
+For example, let's say that an app needs to get a list of all repositories and the number of times they've been starred. Well, before you can get the number of stars for each repository, you'd need to get the user's information. Then after retrieving the user's profile the code can then take that information to find all of the repositories.
+
+Generators will also be used heavily in upcoming additions to the JavaScript language. One upcoming feature that will make use of them is [async functions](https://github.com/tc39/ecmascript-asyncawait).
