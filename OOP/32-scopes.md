@@ -1,6 +1,6 @@
 # Lexical Scopes
 
-A ** lexical scope** in JavaScript defines _what variables you have access to_. In JavaScript there are two types of scope:
+A **lexical scope** in JavaScript defines _what variables you have access to_. Only the `{}` creates a scope. In JavaScript there are two types of scope:
 
 * Global scope
 * Local scope
