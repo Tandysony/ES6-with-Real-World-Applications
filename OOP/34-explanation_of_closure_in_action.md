@@ -112,4 +112,7 @@ So the explanation above was _all wrong_, let’s try it again, but **correctly 
 
 17. Line 13. We log the content of variables `c1`, `c2` and `c3`.
 
+The following animated gif shows the process of Closure in action:
+![JavaScript Closure in Action](./img/JS_Closure.gif)
+
 So now we understand how this works. When a function returns a function, that is when the concept of closures becomes more relevant. The returned function has access to variables that are not in the global scope, but they solely exist in its closure.
