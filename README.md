@@ -51,7 +51,7 @@
 ### Object-Oriented Programming
 
 31. [Basics on OOP in JavaScript](OOP/31-oop_in_js.md)
-32. [Scopes](OOP/32-scopes.md)
+32. [Lexical Scopes](OOP/32-scopes.md)
 33. [Closures](OOP/33-closures.md)
 34. [Step-by-Step Explanations on Closure in Action](OOP/34-explanation_of_closure_in_action.md)
 
