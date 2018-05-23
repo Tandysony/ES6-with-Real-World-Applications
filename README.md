@@ -50,6 +50,8 @@
 
 ### Object-Oriented Programming
 
+> Contents of this portion comes from the course [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015)
+
 31. [Basics on OOP in JavaScript](OOP/31-oop_in_js.md)
 32. [Lexical Scopes](OOP/32-scopes.md)
 33. [Closures](OOP/33-closures.md)
