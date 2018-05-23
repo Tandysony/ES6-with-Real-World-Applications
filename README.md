@@ -37,6 +37,7 @@
 29. [Browser Compatibilities for ES6 Features](ES6-to-ES5/29-browser_compatibilities_for_es6.md)
 30. [Transpiling ES6 to ES5](ES6-to-ES5/30-transpiling_es6-to-es5.md)
 31. [Basics on OOP in JavaScript](OOP/31-oop_in_js.md)
+32. [Scopes](OOP/32-scopes.md)
 
 ## Reference
 
