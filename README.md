@@ -2,7 +2,7 @@
 
 * Tandy Suo Tan
 
-### Lecture notes taken for the Udacity course: [ES6 - JavaScript Improved](https://www.udacity.com/course/es6-javascript-improved--ud356)
+### Lecture notes taken for the Udacity courses: [ES6 - JavaScript Improved](https://www.udacity.com/course/es6-javascript-improved--ud356) and [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015)
 
 ## Table of Contents
 
@@ -49,8 +49,6 @@
 30. [Transpiling ES6 to ES5](ES6-to-ES5/30-transpiling_es6-to-es5.md)
 
 ### Object-Oriented Programming
-
-> Contents of this portion comes from the course [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015)
 
 31. [Basics on OOP in JavaScript](OOP/31-oop_in_js.md)
 32. [Lexical Scopes](OOP/32-scopes.md)
