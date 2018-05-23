@@ -140,3 +140,7 @@ If you open your DevTools and navigate to the Sources tab in Chrome (or Debugger
 If you define any inner function within another function, this inner function is called a closure. It retains access to the variables created in the outer function.
 
 A closure is a function having access to the parent scope, even after the parent function has closed.
+
+## Reference
+
+1.  [I never understood JavaScript closures, Until someone explained it to me like this …](https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8)
