@@ -52,6 +52,7 @@
 
 31. [Basics on OOP in JavaScript](OOP/31-oop_in_js.md)
 32. [Scopes](OOP/32-scopes.md)
+33. [Closures](OOP/33-closures.md)
 
 ## Reference
 
