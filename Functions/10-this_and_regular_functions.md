@@ -42,7 +42,11 @@ If the function is called with no context:
 teleport();
 ```
 
-In the code above, the value of `this` inside `teleport()` is either the global object or, if in strict mode, it's undefined.
+In the code above, the value of `this` inside `teleport()` is either the `global` object or, if in _strict mode_, it's `undefined`.
+
+Here is a more concrete example:
+
+!["this" refers to "global"](./img/"this"-refers-to-global-case.gif)
 
 > **TIP:** `this` in JavaScript is a complicated topic. We just did a quick overview, but for an in-depth look at how this is determined, check out [this All Makes Sense Now](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md)! from Kyle Simpson's book series [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/README.md).
 
