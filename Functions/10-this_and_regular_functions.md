@@ -12,7 +12,7 @@ If the function is called with `new`:
 const mySundae = new Sundae("Chocolate", ["Sprinkles", "Hot Fudge"]);
 ```
 
-In the code above, the value of `this` inside the `Sundae` constructor function is a new object because it was called with `new`.
+In the code above, the value of `this` inside the `Sundae` constructor function is a new `object` because it was called with `new`.
 
 ### 2. A specified object
 
@@ -58,7 +58,7 @@ Here is a more concrete example:
 const redTrain = new Train("red");
 ```
 
-> **Answer:** a new object, since the `new` keyword is used.
+> **Answer:** a new `object`, since the `new` keyword is used.
 
 2.  What is the value of `this` inside the `increaseSpeed()` function below?
 
