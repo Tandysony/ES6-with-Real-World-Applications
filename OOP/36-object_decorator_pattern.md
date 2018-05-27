@@ -68,6 +68,10 @@ decor("Tandy");
 // Finished!
 ```
 
+Please refer to the follow animated gif for decorator in action. Please pay attention the the **closure** as well.
+
+![Decorator in action](./img/decorator.gif)
+
 ## How to Use JavaScript Decorators
 
 Decorators use a special syntax in JavaScript, whereby they are prefixed with an `@` symbol and placed immediately before the code being decorated. FYI, the `@` symbol is not available in ES6/ES2015.
