@@ -2,7 +2,9 @@
 
 As learnt before, the keyword `class` introduced in ES6 is **syntactical sugar**, JavaScript remains **prototype-based**.
 
-A JavaScript object instance only has one construct: **objects**. Each object has a _private property_ which _holds a link to another object_ called its **prototype**. _That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype_. By definition, `null` has no prototype, and acts as the final link in this _prototype chain_.
+A JavaScript object instance only has one construct: **objects**. Each object has a _private property_ which _holds a link to another object_ called its **prototype**. _That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype_. By definition, `null` has no prototype, and acts as the final link in this _prototype chain_. Check the animated gif bellow to see the objects `gold` and `rose`, and their prototype chains.
+
+![Prototype chain in action](./img/prototype_chain_in_action.gif)
 
 **Prototype Chains** are mechanisms for making objects the resemble other objects. This makes one object behaves as if it has all the properties of the other object, by _delegating the fields lookups from the first object to the other object_.
 
@@ -38,6 +40,8 @@ var rose = Object.create(gold);
 rose.b = 3;
 console.log(rose.a); // 1
 ```
+
+Refer to the animated gif above for the prototype chains.
 
 The `delegating` is fundamentally different from `copying`. if we add a new property in `gold`, then accessing to the new property in `blue` and `rose` be different.
 
