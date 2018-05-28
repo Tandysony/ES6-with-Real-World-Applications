@@ -64,3 +64,34 @@ You can also observe that properties/methods from parents were properly carried 
 console.log(puff.description());
 //Gender: female; Name: Puffy
 ```
+
+## The `new` keyword and the constructor function
+
+JavaScript has the concept of a `new` keyword used in conjunction with constructor functions. This feature was built into JavaScript to make it look familiar to people trained in class-based programming. You may have seen JavaScript OOP code that looks like this:
+
+```js
+function Person(name) {
+  this.name = name;
+  this.sayName = function() {
+    return "Hi, I'm " + this.name;
+  };
+}
+
+var adam = new Person("Adam");
+```
+
+Implementing inheritance using JavaScript’s default method looks more complicated. We define `Ninja` as a sub-class of `Person`. Ninjas can have a name as they are a person, and they can also have a primary weapon, such as shuriken.
+
+```js
+function Ninja(name, weapon) {
+  Person.call(this, name); // <-- x.call(this, xx) to inherit
+  this.weapon = weapon;
+}
+
+Ninja.prototype = Object.create(Person.prototype);
+Ninja.prototype.constructor = Ninja;
+```
+
+Since it’s not really a class, it’s important to understand what a **call** to a constructor does. It _first creates an empty object_, _then sets the prototype of this object to the prototype property of the constructor_, _then calls the constructor function with this pointing to the newly-created object_, and _finally returns the object_. It’s an indirect way of doing prototype-based OOP that looks like class-based OOP.
+
+The most effective way to work with OOP in JavaScript is to understand prototypal OOP, whether the constructor pattern is used or not. Refer to the pervious section for prototype chain to hav a basic idea.
