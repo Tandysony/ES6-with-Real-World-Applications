@@ -92,6 +92,10 @@ Ninja.prototype = Object.create(Person.prototype);
 Ninja.prototype.constructor = Ninja;
 ```
 
+> **NOTES:**  
+> `.prototype` object is the freely available object to storing things. You can use `.method` instead.
+> Every `.prototype` object has a `.constructor` property which points back to the function it attached to. Thus there is a mutual linking between any function and its companion `.prototype` object. Therefore, `Ninja.prototype.constructor` is `Ninja` itself.
+
 Since it’s not really a class, it’s important to understand what a **call** to a constructor does. It _first creates an empty object_, _then sets the prototype of this object to the prototype property of the constructor_, _then calls the constructor function with this pointing to the newly-created object_, and _finally returns the object_. It’s an indirect way of doing prototype-based OOP that looks like class-based OOP.
 
-The most effective way to work with OOP in JavaScript is to understand prototypal OOP, whether the constructor pattern is used or not. Refer to the pervious section for prototype chain to hav a basic idea.
+The most effective way to work with OOP in JavaScript is to understand prototypal OOP, whether the constructor pattern is used or not. Refer to the pervious section for prototype chain to hav a basic idea first.
