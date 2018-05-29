@@ -57,7 +57,7 @@
 35. [Prototype Chains](OOP/35-prototype_chains.md)
 36. [Decorator Pattern](OOP/36-object_decorator_pattern.md)
 37. [Prototypal Classes](OOP/37-prototypal_classes.md)
-38. [Pseudoclassical Patterns](OOP/38-pseudoclassical_patterns.md)
+38. [Ways to Define a JavaScript Class](OOP/38-ways_to_define_classes.md)
 
 ## References
 
