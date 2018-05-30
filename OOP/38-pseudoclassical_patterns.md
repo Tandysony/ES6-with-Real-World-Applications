@@ -64,3 +64,29 @@ any.move();
 var ben = new Car(9);
 ben.move();
 ```
+
+## Styles of Writing Classes
+
+Any pseudoclassical, prototypal and functional-shared class is composed with two distinct sections:
+
+* In section 1, you will specify how all the instances should be **different**.
+* in section 2, you will specify how all the instances should be **similar**. The similarities are stored as properties of the prototype.
+
+Looking back at the functional version of this class
+
+```js
+/* function class */
+var Car = function(loc) {
+  var obj = { loc: loc };
+  obj.move = function() {
+    obj.loc++;
+  };
+  return loc;
+};
+
+// instances
+var amy = Car(1); // <-- no `new` keyword
+any.move();
+var ben = Car(9); // <-- no `new` keyword
+ben.move();
+```
