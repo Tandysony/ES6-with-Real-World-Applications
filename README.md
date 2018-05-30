@@ -58,6 +58,7 @@
 36. [Decorator Pattern](OOP/36-object_decorator_pattern.md)
 37. [Prototypal Classes](OOP/37-prototypal_classes.md)
 38. [Ways to Define a JavaScript Class](OOP/38-ways_to_define_classes.md)
+39. [Pseudoclassical Patterns](OOP/39-pseudoclassical_patterns.md)
 
 ## References
 
