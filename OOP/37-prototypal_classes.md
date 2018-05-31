@@ -51,11 +51,11 @@ cat.purr = function() {
 We can use our cat as a prototype and create a few more cats:
 
 ```js
-ar colonel = Object.create(cat);
-colonel.name = 'Colonel Meow';
+var colonel = Object.create(cat);
+colonel.name = "Colonel Meow";
 
 var puff = Object.create(cat);
-puff.name = 'Puffy';
+puff.name = "Puffy";
 ```
 
 You can also observe that properties/methods from parents were properly carried over:
