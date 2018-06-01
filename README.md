@@ -59,6 +59,7 @@
 37. [Prototypal Classes](OOP/37-prototypal_classes.md)
 38. [Ways to Define a JavaScript Class](OOP/38-ways_to_define_classes.md)
 39. [Pseudoclassical Patterns](OOP/39-pseudoclassical_patterns.md)
+40. [Superclass and Subclass](OOP/40-superclass_and_subclass.md)
 
 ## References
 
