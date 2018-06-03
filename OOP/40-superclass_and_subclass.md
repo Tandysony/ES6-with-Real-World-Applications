@@ -2,7 +2,7 @@
 
 Superclass and subclass are fundamentals for OOP. Here, functional and pseudoclassical patterns are introduced respectively.
 
-## Functional Pattern
+## 1. Functional Pattern
 
 * Superclass `Car`
 
@@ -39,7 +39,7 @@ var Cop = function(loc) {
 };
 ```
 
-* Pseudoclassical Pattern
+# 2. Pseudoclassical Pattern
 
 We want the following code running correct. How do you design the superclass and subclass in pseudoclassical pattern?
 
@@ -100,4 +100,42 @@ You need add one more line in-between the last two lines:
 
 ```js
 Van.prototype.constructor = Van;
+```
+
+# 3. Modern JavaScript Pattern with keyword `class`
+
+ES6 make the OOP in JavaScript much easier, as learnt in [Section 14 - Javascript Classes](Functions/14-javascript_classes.md). The example above can be rewritten as
+
+```js
+// superclass
+class Car {
+  constructor(loc) {
+    this.loc = loc;
+  }
+
+  move() {
+    this.loc++;
+  }
+}
+
+// subclass
+class Van extends Car {
+  constructor(loc) {
+    super(loc);
+    this.loc = loc;
+  }
+
+  grab() {}
+}
+
+// instances
+const zed = new Car(3);
+zed.move();
+console.log(zed.loc); // 4
+
+const amy = new Van(9);
+console.log(amy.loc); // 9
+amy.move();
+console.log(amy.loc); // 10
+amy.grab();
 ```
