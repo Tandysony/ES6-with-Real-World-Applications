@@ -2,6 +2,13 @@
 
 Whenever we need to perform DOM manipulation, **jQuery** will be the easy solution. However, the _vanilla (pure) JavaScript DOM API_ is actually quite capable in its own right. Please please keep in mind, some of the API, i.e., `.querySelector("#id")`, only works for **IE 11 +**.
 
+Some of the most common DOM manipulation tasks with plain JavaScript are:
+
+- querying and modifying the DOM,
+- modifying classes and attributes,
+- listening to events, and
+- animation.
+
 ## Accessing DOM Elements
 
 ```js
@@ -23,6 +30,8 @@ document.querySelector("#someId");
 document.querySelectorAll("div.note, div.alert");
 ```
 
+`document.querySelector()` and `document.querySelectorAll()` are recommended, as they take an arbitrary CSS selector as an argument, and is more of JQuery style.
+
 ## Grab Children/Parent Node(s)
 
 ```js
@@ -32,6 +41,40 @@ var children = stored.childNodes;
 
 // Get parent node
 var parental = children.parentNode;
+```
+
+Each element also has a couple of rather self-explanatory read-only properties referencing the “family”, all of which are live:
+
+```js
+myElement.children;
+myElement.firstElementChild;
+myElement.lastElementChild;
+myElement.previousElementSibling;
+myElement.nextElementSibling;
+```
+
+As the Element interface inherits from the **Node interface**, the following properties are also available:
+
+```js
+myElement.childNodes;
+myElement.firstChild;
+myElement.lastChild;
+myElement.previousSibling;
+myElement.nextSibling;
+myElement.parentNode;
+myElement.parentElement;
+```
+
+Where the former only reference elements, the latter (except for `.parentElement`) can be any kind of node, e.g. text nodes. We can then check the type of a given node like e.g.
+
+```js
+myElement.firstChild.nodeType === 3; // this would be a text node
+```
+
+As with any object, we can check a node’s prototype chain using the instanceof operator:
+
+```js
+myElement.firstChild.nodeType instanceof Text;
 ```
 
 ## Create New DOM Elements
@@ -52,11 +95,13 @@ newParagraph.appendChild(pText);
 // elements are now created and ready to be added to the DOM.
 ```
 
+Every element also has the properties `.innerHTML` and `.textContent` (as well as `.innerText`, which is similar to `.textContent`, but has some important differences). These hold the **HTML** and **plain text** content respectively.
+
 ## Add Elements to the DOM
 
 ```js
 // grab element on page you want to add stuff to
-var firstHeading = document.getElementById("firstHeading");
+var firstHeading = document.querySelector("#firstHeading");
 
 // add both new elements to the page as children to the element we stored in firstHeading.
 firstHeading.appendChild(newHeading);
@@ -75,7 +120,7 @@ parent.insertBefore(newHeading, firstHeading);
 
 ```js
 // grab element on page you want to use
-var firstHeading = document.getElementById("firstHeading");
+var firstHeading = document.querySelector("#firstHeading");
 
 // will remove foo if it is a class of firstHeading
 firstHeading.classList.remove("foo");
@@ -92,4 +137,35 @@ firstHeading.classList.toggle("visible");
 
 // will return true if it has class of 'foo' or false if it does not
 firstHeading.classList.contains("foo");
+```
+
+## Modifying Attributes
+
+Element properties can be accessed like any other object’s properties
+
+```js
+// Get an attribute value
+const value = myElement.value;
+
+// Set an attribute as an element property
+myElement.value = "foo";
+
+// Set multiple properties using Object.assign()
+Object.assign(myElement, {
+  value: "foo",
+  id: "bar"
+});
+
+// Remove an attribute
+myElement.value = null;
+```
+
+Note that there are also the methods `.getAttibute()`, `.setAttribute()` and `.removeAttribute()`. These directly modify the HTML attributes (as opposed to the DOM properties) of an element, thus **causing a browser redraw** (you can observe the changes by inspecting the element with your browser’s dev tools). Not only is such a browser redraw more expensive than just setting DOM properties, but these methods also can have unexpected results. You can refer to this article for more tips [Quick Tip: Add or Remove a CSS Class with Vanilla JavaScript](https://www.sitepoint.com/add-remove-css-class-vanilla-js/)
+
+## Adding CSS styles
+
+CSS rules can be applied like any other property; note though that the properties are **_camel-cased_** in JavaScript:
+
+```js
+myElement.style.marginLeft = "2em";
 ```
