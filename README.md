@@ -1,6 +1,6 @@
 # Learn to use ECMAScript 6
 
-* Tandy Suo Tan
+- Tandy Suo Tan
 
 ### Lecture notes taken for the Udacity courses: [ES6 - JavaScript Improved](https://www.udacity.com/course/es6-javascript-improved--ud356) and [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015)
 
@@ -61,7 +61,11 @@
 39. [Pseudoclassical Patterns](OOP/39-pseudoclassical_patterns.md)
 40. [Superclass and Subclass](OOP/40-superclass_and_subclass.md)
 
+### DOM Manipulation
+
+41. [DOM Manipulation](DOM-Manipulation/41-dom-manipulation.md)
+
 ## References
 
-* [ES6 Specification](http://www.ecma-international.org/ecma-262/6.0/)
-* [JavaScript Promises by Google](https://www.udacity.com/course/javascript-promises--ud898)
+- [ES6 Specification](http://www.ecma-international.org/ecma-262/6.0/)
+- [JavaScript Promises by Google](https://www.udacity.com/course/javascript-promises--ud898)
