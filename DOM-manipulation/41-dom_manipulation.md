@@ -169,3 +169,52 @@ CSS rules can be applied like any other property; note though that the propertie
 ```js
 myElement.style.marginLeft = "2em";
 ```
+
+## Listening to events
+
+We can use `.addEventListener()` method to add as many events of as many types as we like. It takes three arguments:
+
+- the event type (such as click),
+- a function that gets called whenever the event occurs on the element (this function gets passed an event object), and
+- an optional config object which will be explained further below.
+
+```js
+myElement.addEventListener("click", function(event) {
+  console.log(event.type + " got fired");
+});
+
+myElement.addEventListener("click", function(event) {
+  console.log(event.type + " got fired again");
+});
+```
+
+Within the listener function, `event.target` refers to the element on which the event was triggered (as does `this`, unless of course we’re using an arrow function). Thus you can easily access its properties like so:
+
+```js
+// The `forms` property of the document is an array holding
+// references to all forms
+const myForm = document.forms[0];
+const myInputElements = myForm.querySelectorAll("input");
+
+Array.from(myInputElements).forEach(el => {
+  el.addEventListener("change", function(event) {
+    console.log(event.target.value);
+  });
+});
+```
+
+#### Preventing default actions
+
+Note that `event` is always available within the listener function, but it is good practice to **explicitly pass it** in anyway when needed (and we can name it as we like then, of course). Without elaborating on the Event interface itself, one particularly noteworthy method is `.preventDefault()`, which will, well, prevent the browser’s default behavior, _such as following a link_. Another common use-case would be to conditionally prevent the submission of a form if the client-side form-validation fails.
+
+```js
+myForm.addEventListener("submit", function(event) {
+  const name = this.querySelector("#name");
+
+  if (name.value === "Donald Duck") {
+    alert("You gotta be kidding!");
+    event.preventDefault();
+  }
+});
+```
+Another important event method is `.stopPropagation()`, which will prevent the event from bubbling up the DOM. This means that if we have a propagation-stopping click listener (say) on an element, and another click listener on one of its parents, a click event that gets triggered on the child element won’t get triggered on the parent — otherwise, it would get triggered on both.
