@@ -64,6 +64,7 @@
 ### DOM Manipulation
 
 41. [DOM Manipulation](DOM-Manipulation/41-dom-manipulation.md)
+42. [Best Practice on DOM Manipulation](DOM-Manipulation/42-best_practice_on_dom.md)
 
 ## References
 
