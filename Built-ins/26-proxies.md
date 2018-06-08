@@ -4,14 +4,14 @@ The **Proxy** object is used to _define custom behavior for fundamental operatio
 
 To create a proxy object, we use the Proxy constructor - `new Proxy();`. The proxy constructor takes two items:
 
-* the object that it will be the proxy for. It is called the **target**.
-* an object containing the list of methods it will handle for the proxied object. It is called the **handler**.
+- the object that it will be the proxy for. It is called the **target**.
+- an object containing the list of methods it will handle for the proxied object. It is called the **handler**.
 
 ```js
 let p = new Proxy(target, handler);
 ```
 
-##A Pass Through Proxy
+## A Pass Through Proxy
 
 The simplest way to create a proxy is to provide an object and then an empty handler object.
 
@@ -199,13 +199,13 @@ So some functionality of proxy objects may seem similar to existing ES5 getter/s
 
 A proxy object sits between _a real object_ and _the calling code_. The _calling code_ **interacts with the proxy** instead of the real object. To create a proxy:
 
-* use the `new Proxy()` constructor
+- use the `new Proxy()` constructor
 
-  * pass the object being proxied as the first item
-  * the second object is a handler object
+  - pass the object being proxied as the first item
+  - the second object is a handler object
 
-* the handler object is made up of 1 of [13 different "traps"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
-* a trap is a function that will intercept calls to properties let you run code
-* if a trap is not defined, the default behavior is sent to the target object
+- the handler object is made up of 1 of [13 different "traps"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
+- a trap is a function that will intercept calls to properties let you run code
+- if a trap is not defined, the default behavior is sent to the target object
 
 `Proxies are a powerful new way to **create and manage the interactions between objects**.`
