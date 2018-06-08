@@ -84,5 +84,3 @@ elements1.length === elements2.length; // false, elements1.length + 1 = elements
 ```
 
 Another consideration is that such a live collection doesn’t need to have all of the information up front, whereas `.querySelectorAll()` immediately gathers everything in a static list, making it less performant. That is, `getElementsByTagName()` is faster than `querySelectorAll()`. You can refer to [Access to nodes via querySelectorAll vs getElementsByTagName](https://jsperf.com/access-to-nodes-via-queryselectorall-vs-getelementsbyta/5) for the performance comparison.
-
-### 4.
