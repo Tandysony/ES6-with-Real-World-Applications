@@ -63,8 +63,12 @@
 
 ### DOM Manipulation
 
-41. [DOM Manipulation](DOM-Manipulation/41-dom-manipulation.md)
-42. [Best Practice on DOM Manipulation](DOM-Manipulation/42-best_practice_on_dom.md)
+41. [DOM Manipulation](DOM-manipulation/41-dom_manipulation.md)
+42. [Best Practice on DOM Manipulation](DOM-manipulation/42-best_practice_on_dom.md)
+
+### Real Applications
+
+43. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
 
 ## References
 
