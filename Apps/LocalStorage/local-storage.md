@@ -6,6 +6,10 @@
 - Show all the tweets in a list
 - Can remove a chosen tweet from the list
 
+#### Final result:
+
+![A simple tweet application using local storage](./static/local_storage.gif)
+
 ### Summary & Tips
 
 1.  `.appendChild(el)` only works on a **HTML Node**, which means `el` must be a **Node**, e.g., `div`, `li`. The following won't work:
@@ -24,4 +28,14 @@ You must use `document.createElement()` to create a **Node** before using `appen
 const li = document.createElement("li");
 li.textContent = tweet;
 tweetList.appendChild(li);
+```
+
+2.  Use `JSON.stringify(array)` to convert array to string before writing to _localStorage_, and use `JSON.parse(valueFromStorage)` to convert string to array.
+
+```js
+// convert array to string before save to localStorage
+localStorage.setItem("tweets", JSON.stringify(existingTweets));
+
+// convert string to array to use
+let tweets = JSON.parse(localStorage.getItem("tweets"));
 ```
