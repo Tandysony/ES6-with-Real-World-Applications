@@ -7,6 +7,21 @@ h2 {
   margin-top: 40px;
 }
 
+.tweet {
+  list-style: none;
+  border: 1px solid rgba(211, 211, 211);
+  margin-bottom: 6px;
+  padding: 6px 8px 6px 8px;
+}
+
+.tweet:nth-of-type(odd) {
+  background-color: rgba(245, 245, 245, 0.845);
+}
+
+.tweet:nth-of-type(even) {
+  background-color: rgb(233, 233, 233);
+}
+
 #tweet-form,
 #tweet-list {
   padding: 10px 10px 10px 10px;
@@ -22,6 +37,6 @@ h2 {
 .remove-tweet:hover {
   float: right;
   cursor: pointer;
-  color: red;
+  color: red !important;
   font-weight: bold;
 }
