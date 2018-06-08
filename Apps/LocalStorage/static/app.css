@@ -1,0 +1,27 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+#tweet-form,
+#tweet-list {
+  padding: 10px 10px 10px 10px;
+}
+
+#tweet-list {
+  margin-top: 15px;
+  min-height: 300px;
+  border: 1px solid lightgray;
+}
+
+.remove-tweet,
+.remove-tweet:hover {
+  float: right;
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
