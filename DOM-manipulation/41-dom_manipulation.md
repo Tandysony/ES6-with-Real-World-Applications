@@ -170,7 +170,7 @@ CSS rules can be applied like any other property; note though that the propertie
 myElement.style.marginLeft = "2em";
 ```
 
-## Listening to events
+## Listening to Events
 
 We can use `.addEventListener()` method to add as many events of as many types as we like. It takes three arguments:
 
@@ -203,6 +203,19 @@ Array.from(myInputElements).forEach(el => {
 });
 ```
 
+### Common HTML Events
+
+Here is a list of some common HTML events:
+
+- `onchange` An HTML element has been changed
+- `onclick` The user clicks an HTML element
+- `onmouseover` The user moves the mouse over an HTML element
+- `onmouseout` The user moves the mouse away from an HTML element
+- `onkeydown` The user pushes a keyboard key
+- `onload` The browser has finished loading the page
+
+For more events, please refer to [Event reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+
 #### Preventing default actions
 
 Note that `event` is always available within the listener function, but it is good practice to **explicitly pass it** in anyway when needed (and we can name it as we like then, of course). Without elaborating on the Event interface itself, one particularly noteworthy method is `.preventDefault()`, which will, well, prevent the browser’s default behavior, _such as following a link_. Another common use-case would be to conditionally prevent the submission of a form if the client-side form-validation fails.
@@ -217,4 +230,5 @@ myForm.addEventListener("submit", function(event) {
   }
 });
 ```
+
 Another important event method is `.stopPropagation()`, which will prevent the event from bubbling up the DOM. This means that if we have a propagation-stopping click listener (say) on an element, and another click listener on one of its parents, a click event that gets triggered on the child element won’t get triggered on the parent — otherwise, it would get triggered on both.
