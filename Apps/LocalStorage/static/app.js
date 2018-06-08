@@ -1,10 +1,10 @@
-// ----------- Variables -----------
+/* ----------- Variables ----------- */
 const tweetInput = document.querySelector("#tweet-input"),
   tweetBtn = document.querySelector("#tweet-submit"),
   tweetForm = document.querySelector("#tweet-form"),
   tweetList = document.querySelector("#tweet-list");
 
-// -----------  Event Listeners -----------
+/* -----------  Event Listeners ----------- */
 eventListeners();
 
 function eventListeners() {
@@ -16,9 +16,12 @@ function eventListeners() {
 
   // removeBtn click
   tweetList.addEventListener("click", removeTweet);
+
+  // Document ready
+  document.addEventListener("DOMContentLoaded", localStorageOnLoad);
 }
 
-// ----------- Functions -----------
+/* ----------- Functions ----------- */
 function newTweet(e) {
   e.preventDefault();
 
@@ -41,6 +44,9 @@ function newTweet(e) {
   // clear textarea and disable submission
   tweetInput.value = "";
   tweetBtn.disabled = true;
+
+  // add tweet to local storage
+  addTweetToLocalStorage(tweet);
 }
 
 function checkInput(e) {
@@ -54,10 +60,43 @@ function checkInput(e) {
   }
 }
 
+function addTweetToLocalStorage(tweet) {
+  let existingTweets = getTweetsFromStorage();
+  existingTweets.push(tweet);
+
+  // convert array to string before save to localStorage
+  localStorage.setItem("tweets", JSON.stringify(existingTweets));
+}
+
+function getTweetsFromStorage() {
+  let tweets = [];
+  if (localStorage.getItem("tweets") !== null) {
+    tweets = JSON.parse(localStorage.getItem("tweets"));
+  }
+  return tweets;
+}
+
 function removeTweet(e) {
   e.preventDefault();
 
   if (e.target.classList.contains("remove-tweet")) {
     e.target.parentElement.remove();
   }
+}
+
+function localStorageOnLoad() {
+  const tweets = getTweetsFromStorage();
+
+  tweets.forEach(function(tweet) {
+    const rmBtn = document.createElement("a");
+    rmBtn.classList = "remove-tweet";
+    rmBtn.textContent = "X";
+
+    const li = document.createElement("li");
+    li.textContent = tweet;
+    li.classList.add("tweet");
+    li.appendChild(rmBtn);
+
+    tweetList.appendChild(li);
+  });
 }
