@@ -1,6 +1,6 @@
 # A simple Tweet Application using LocalStorage
 
-#### Requirements:
+### Requirements:
 
 - Can add and save a tweet context
 - Show all the tweets in a list
@@ -15,7 +15,7 @@
 
 The source code for this app can be found [here](../LocalStorage)
 
-### Summary & Tips
+## Summary & Tips
 
 #### Summary
 
