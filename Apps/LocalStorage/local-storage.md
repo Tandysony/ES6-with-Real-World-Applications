@@ -17,6 +17,14 @@ The source code for this app can be found [here](../LocalStorage)
 
 ### Summary & Tips
 
+#### Summary
+
+In this application, the following skills/techniques were used:
+
+- DOM manipulation: `document.querySelector()`, `.createElement()`, `appendChild()`, `.addEventListener()`, and `.classList.add()`.
+- Local storage operations: `localStorage.getItem()` and `localStorage.setItem()`
+- JSON operations: `JSON.stringify(array)` and `JSON.parse(string)`.
+
 1.  `.appendChild(el)` only works on a **HTML Node**, which means `el` must be a **Node**, e.g., `div`, `li`. The following won't work:
 
 ```js
@@ -43,4 +51,18 @@ localStorage.setItem("tweets", JSON.stringify(existingTweets));
 
 // convert string to array to use
 let tweets = JSON.parse(localStorage.getItem("tweets"));
+```
+
+3.  For a dynamically generated elements with a certain class, operate on its parent and use `event.target` to identify the source and then perform actions. For example:
+
+```js
+// removeBtn click
+tweetList.addEventListener("click", removeTweet);
+
+function removeTweet(e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains("remove-tweet")) {
+    e.target.parentElement.remove();
+  }
 ```
