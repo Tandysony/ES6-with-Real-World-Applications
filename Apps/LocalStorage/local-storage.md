@@ -68,3 +68,9 @@ function removeTweet(e) {
 ```
 
 4.  Styling the odd and event items in a list with `:nth-child(n)` selector in CSS3: `:nth-of-type(odd)` and `:nth-of-type(event)`. Similar selectors include [nth-last-of-type](https://css-tricks.com/almanac/selectors/n/nth-last-of-type/), [nth-child](https://css-tricks.com/almanac/selectors/n/nth-child/), [nth-last-child](https://css-tricks.com/almanac/selectors/n/nth-last-child/), [first-of-type](https://css-tricks.com/almanac/selectors/f/first-of-type/) and [last-of-type](https://css-tricks.com/almanac/selectors/l/last-of-type/)
+
+5.  Rules on functions in ES6:
+
+- Use `function` in the **global scope**, a **primitive function** and for **`Object.prototype` properties**.
+- Use `class` for object constructors.
+- Use `=>` everywhere else.
