@@ -1,13 +1,13 @@
 # A simple Tweet Application using LocalStorage
 
-### Requirements:
+## Requirements:
 
 - Can add and save a tweet context
 - Show all the tweets in a list
 - Can remove a chosen tweet from the list
 - After refreshing the page, saved tweets are loaded.
 
-#### Final result:
+#### Final result
 
 ![A simple tweet application using local storage](./static/local_storage.gif)
 
