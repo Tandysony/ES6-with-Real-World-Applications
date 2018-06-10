@@ -4,7 +4,7 @@ Functions are one of the primary data structures in JavaScript; they've been aro
 
 ## Arrow functions
 
-ES6 introduces a new kind of function called the ·arrow function·. Arrow functions are very similar to regular functions in behavior, but are quite different syntactically. The following code takes a list of names and converts each one to uppercase using a regular function:
+ES6 introduces a new kind of function called the **arrow function**. Arrow functions are very similar to regular functions in behavior, but are quite different syntactically. The following code takes a list of names and converts each one to uppercase using a regular function:
 
 ```js
 const upperizedNames = ["Farrin", "Kagure", "Asser"].map(function(name) {
@@ -38,12 +38,12 @@ const upperizedNames = ["Farrin", "Kagure", "Asser"].map(function(name) {
 
 With the function above, there are only a few steps for converting the existing "normal" function into an arrow function.
 
-* remove the `function` keyword
-* remove the parentheses
-* remove the opening and closing curly braces
-* remove the `return` keyword
-* remove the semicolon
-* add an arrow ( `=>` ) between the parameter list and the function body
+- remove the `function` keyword
+- remove the parentheses
+- remove the opening and closing curly braces
+- remove the `return` keyword
+- remove the semicolon
+- add an arrow ( `=>` ) between the parameter list and the function body
 
 ## Quiz
 
