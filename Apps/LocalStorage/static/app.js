@@ -22,6 +22,8 @@ function eventListeners() {
 }
 
 /* ----------- Functions ----------- */
+
+// create new tweet event
 function newTweet(e) {
   e.preventDefault();
 
@@ -76,6 +78,7 @@ function getTweetsFromStorage() {
   return tweets;
 }
 
+// remove tweet event
 function removeTweet(e) {
   e.preventDefault();
 
@@ -87,10 +90,11 @@ function removeTweet(e) {
   removeTweetFromLocalStorage(e.target.parentElement.textContent);
 }
 
+// document loaded or ready event
 function localStorageOnLoad() {
   const tweets = getTweetsFromStorage();
 
-  tweets.forEach(function(tweet) {
+  tweets.forEach(tweet => {
     const rmBtn = document.createElement("a");
     rmBtn.classList = "remove-tweet";
     rmBtn.textContent = "X";
@@ -110,7 +114,7 @@ function removeTweetFromLocalStorage(tweet) {
   const tweetToMove = tweet.substring(0, tweet.length - 1);
 
   // loop through tweets to delete
-  tweets.forEach(function(el, index) {
+  tweets.forEach((el, index) => {
     if (el === tweetToMove) {
       tweets.splice(index, 1);
     }
