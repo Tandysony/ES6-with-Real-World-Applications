@@ -8,6 +8,7 @@
     <title>Course Shopping Cart</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./static/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/lib/starrr-gh-pages/dist/starrr.css">
     <link rel="stylesheet" href="./static/css/app.css">
 </head>
 
@@ -23,7 +24,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="./static/img/udemy-2.svg" width="120" height="34" alt="logo">
+                    <img src="./static/img/udemy-2.svg" width="120px" height="34px" alt="logo">
                 </a>
             </div>
 
@@ -70,28 +71,40 @@
                     </div>
                 </form>
 
+                <!-- shopping cart -->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-lg fa-shopping-cart"></i>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Action</a>
-                            </li>
-                            <li>
-                                <a href="#">Another action</a>
-                            </li>
-                            <li>
-                                <a href="#">Something else here</a>
-                            </li>
-                            <li role="separator" class="divider"></li>
-                            <li>
-                                <a href="#">Separated link</a>
-                            </li>
-                        </ul>
+                        <div class="dropdown-menu cart">
+                            <div>
+                                <table class="table" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="30%">Image</th>
+                                            <th colspan="40%">Name</th>
+                                            <th colspan="15%">price</th>
+                                            <th colspan="15%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="course-chosen">
+                                        <tr>
+                                            <td colspan="30%">img</td>
+                                            <td colspan="40%">Learn Javascript the hard way</td>
+                                            <td colspan="15%">$12.99</td>
+                                            <td colspan="15%">x</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="btn btn-default btn-block" id="btn-clear-cart">CLEAR CART</button>
+                            </div>
+
+
+                        </div>
                     </li>
                 </ul>
+                <!-- /.shopping cart -->
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -101,218 +114,315 @@
 
     <!-- promotion banner -->
     <section>
-        <div class="container-fluid">
-            <div class="promotion">
-                <h1 class="title">$19.99 June Blowout</h1>
-                <h4 class="secondary">With savings like this, there's no limit to what you can learn
-                </h4>
-            </div>
+        <div class="promotion">
+            <h1 class="title">$12.99 June Blowout</h1>
+            <h4 class="secondary">With savings like this, there's no limit to what you can learn
+            </h4>
         </div>
     </section>
     <!-- /. promotion banner -->
 
     <!-- course grid -->
-    <section>
-        <div class="courses">
-            <div class="course">
-                <img src="https://picsum.photos/220/120" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+    <h1 class="text-center">Featured Courses</h1>
+    <section class="courses">
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/120" alt="">
+            <div class="course-detail">
+                <div class="course-title">Design Patterns in C#</div>
+                <div class="course-teacher">Kipp Sargood</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/121" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/121" alt="">
+            <div class="course-detail">
+                <div class="course-title">How To Write Bulletproof Multi-Threaded C# Code</div>
+                <div class="course-teacher">Goddart Menelaws</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/122" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/122" alt="">
+            <div class="course-detail">
+                <div class="course-title">Learn Modern JavaScript: Advanced Topics</div>
+                <div class="course-teacher">Goddart Menelaws</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/123" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/123" alt="">
+            <div class="course-detail">
+                <div class="course-title">Bootstrap 4 From Scratch With 5 Projects</div>
+                <div class="course-teacher">Elana Mangenet</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/124" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/124" alt="">
+            <div class="course-detail">
+                <div class="course-title">Advanced CSS and Sass: Flexbox, Grid, Animations and More!</div>
+                <div class="course-teacher">Sanford Smelley</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/125" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/125" alt="">
+            <div class="course-detail">
+                <div class="course-title">PHP for Beginners - Become a PHP Master - CMS Project</div>
+                <div class="course-teacher">Halli Hourigan</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/126" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/126" alt="">
+            <div class="course-detail">
+                <div class="course-title">Microsoft Excel - Excel from Beginner to Advanced</div>
+                <div class="course-teacher">Kain Atherton</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/127" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/127" alt="">
+            <div class="course-detail">
+                <div class="course-title">React 16 - The Complete Guide (incl. React Router 4 & Redux)</div>
+                <div class="course-teacher">Jordon Aizikov</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/128" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/128" alt="">
+            <div class="course-detail">
+                <div class="course-title">Fundamentals of FeathersJS</div>
+                <div class="course-teacher">Querida Purcer</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/129" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/129" alt="">
+            <div class="course-detail">
+                <div class="course-title">Full Stack Web Developer Bootcamp</div>
+                <div class="course-teacher">Wainwright Crossgrove</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/130" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/130" alt="">
+            <div class="course-detail">
+                <div class="course-title">The Agile Samurai Bootcamp</div>
+                <div class="course-teacher">Aldo Berkelay</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/131" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/131" alt="">
+            <div class="course-detail">
+                <div class="course-title">The Ultimate Drawing Course - Beginner to Advanced</div>
+                <div class="course-teacher">Winny Escudier</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/132" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/132" alt="">
+            <div class="course-detail">
+                <div class="course-title">Data Structures in JavaScript</div>
+                <div class="course-teacher">Cheri Noller</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/133" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/133" alt="">
+            <div class="course-detail">
+                <div class="course-title">Modern JavaScript From The Beginning</div>
+                <div class="course-teacher">Gareth Ringwood</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/134" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/134" alt="">
+            <div class="course-detail">
+                <div class="course-title">Accounting 101: Advanced Finance and Accounting for Startups</div>
+                <div class="course-teacher">Adelle Worcester</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/135" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/135" alt="">
+            <div class="course-detail">
+                <div class="course-title">Ultimate Entrepreneurship Guide - Entrepreneurship Explained</div>
+                <div class="course-teacher">Tremayne Ganders</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/136" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/136" alt="">
+            <div class="course-detail">
+                <div class="course-title">JavaScript Interview Prep: Practice Problems</div>
+                <div class="course-teacher">Cassandre Foxten</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/137" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/137" alt="">
+            <div class="course-detail">
+                <div class="course-title">Fundamentals of FeathersJS</div>
+                <div class="course-teacher">Brodie Cogin</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original"> $198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/138" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/138" alt="">
+            <div class="course-detail">
+                <div class="course-title">PMP EXAM PREP-Project Management Professional FULL TRAINING</div>
+                <div class="course-teacher">Ronalda Edinboro</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
-            <div class="course">
-                <img src="https://picsum.photos/220/139" alt="">
-                <div class="course-title">Course Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                <div class="course-teacher">Lorem, ipsum.</div>
-                <div class="rating">4.7</div>
+        </div>
+        <div class="course">
+            <img class="img-responsive" src="https://picsum.photos/250/139" alt="">
+            <div class="course-detail">
+                <div class="course-title">Startup Masterclass: The Ultimate Guide For Young Startups</div>
+                <div class="course-teacher">Cris Barras</div>
+                <div class="rating">
+                    <span class='starrr'></span>
+                    4.7</div>
                 <div class="price">
-                    <div class="original">$198.99</div>
-                    <div class="now">$12.99</div>
+                    <span class="original">$198.99</span>
+                    <span class="now">$12.99</span>
                 </div>
+                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
             </div>
         </div>
     </section>
@@ -334,7 +444,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-4 us">
+            <div class="col-sm-4">
                 <ul>
                     <li>
                         <a href="">About Us</a>
@@ -347,7 +457,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-4 policy">
+            <div class="col-sm-4">
                 <ul>
                     <li>
                         <a href="">Topics</a>
@@ -361,14 +471,37 @@
                 </ul>
             </div>
         </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="col-md-4">
+                    <img src="./static/img/udemy-2.svg" width="120px" height="34px" alt="logo" style="margin-top: -10px;">
+                </div>
+                <div class="col-md-8">
+                    <p>Copyright © 2018 Udemy, Inc.</p>
+                </div>
+
+            </div>
+            <div class="col-sm-6 policy">
+                <ul>
+                    <li>
+                        <a href="">Terms</a>
+                    </li>
+                    <li>
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="">Intellectual Property</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </footer>
     <!-- /. footer -->
 
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./static/lib/starrr-gh-pages/dist/starrr.js"></script>
     <script src="./static/js/app.js"></script>
 </body>
 

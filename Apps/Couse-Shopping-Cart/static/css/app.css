@@ -1,16 +1,117 @@
-#course-categories a>i {
-  padding-right: 12px
+#course-categories a > i {
+  padding-right: 12px;
 }
 
 .navbar-brand {
   padding-top: 10px;
 }
 
-.add-on .input-group-btn>.btn {
+.add-on .input-group-btn > .btn {
   border-left-width: 0;
   left: -2px;
 }
 
+/* shopping cart */
+
+.cart {
+  width: 340px;
+  min-height: 400px;
+  padding: 16px;
+}
+
+#btn-clear-cart {
+  margin-top: 20px;
+}
+
+/* promotion banner */
+
 .promotion {
-  background-image: url("")
+  height: 300px;
+  padding: 80px;
+  color: white;
+  background-image: url("../img/annie-spratt-96529-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* courses */
+
+.courses {
+  padding: 0px 60px 60px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.course {
+  max-width: 220px;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  margin-top: 36px;
+}
+
+.course .course-detail {
+  padding: 16px;
+}
+
+.course .course-title {
+  font-size: 16px;
+  line-height: 1.25;
+  height: 40px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.course .course-teacher {
+  padding: 8px 0 8px;
+  color: gray;
+}
+
+.course .rating {
+  font-weight: 700;
+}
+
+.course .price {
+  float: right;
+  padding-bottom: 12px;
+}
+
+.course .price .original {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.course .price .now {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* footer */
+
+footer {
+  border-top: 1px solid lightgray;
+  padding: 20px;
+  background-color: rgb(252, 252, 252);
+}
+
+footer li {
+  padding: 6px;
+  list-style: none;
+}
+
+footer .business li {
+  font-weight: 700;
+}
+
+footer .policy ul {
+  padding-left: 10px;
+}
+
+footer .policy li {
+  display: inline;
 }
