@@ -69,6 +69,7 @@
 ### Real Applications
 
 43. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
+44. [Course Shopping Cart](Apps/Course-Shopping-Cart/course_shopping_cart.md)
 
 ## References
 
