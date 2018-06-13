@@ -1,5 +1,7 @@
 # A Course Shopping Cart Application
 
+> **Disclaimer:** This application is for practice purpose. If there is anything that violates Udemy's copyright, design or alike, please let me know. I will pull it down.
+
 ## Requirements:
 
 - The course page should be similar to Udemy page
