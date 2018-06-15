@@ -13,10 +13,6 @@
 
 ## Summary & Tips
 
-#### Summary
-
-#### Tips
-
 1.  User `element.getAttribute(data-dt-name)` or `element.dataset.dtName` to access the `data-dt-name` attribute. For example
 
 ```html
@@ -59,5 +55,57 @@ function addCourseToCart(e) {
     // get course information
     getChosenCourse(course);
   }
+}
+```
+
+3.  When clear all children from a list element `elm`, there are two ways:
+
+```js
+// not recommended
+`elm.innerHTML = ""`;
+```
+
+This is not recommended. The following is recommended:
+
+```js
+// recommended
+while (elm.firstChild) {
+  elm.removeChild(elm.firstChild);
+}
+```
+
+4.  When adding an element with complex structure, use template literals and `el.insertAdjacentHTML(position, text)`. Where
+
+- `position`:
+  A DOMString representing the position relative to the element; must be one of the following strings:
+
+  - `'beforebegin'`: Before the element itself.
+  - `'afterbegin'`: Just inside the element, before its first child.
+  - `'beforeend'`: Just inside the element, after its last child.
+  - `'afterend'`: After the element itself.
+
+- `text`:
+  text is the string to be parsed as HTML or XML and inserted into the tree.
+
+For example
+
+```js
+function addCourseToCart(course) {
+  const courseInHTML = `
+    <tr>
+        <td colspan="30%">
+            <img class="img-responsive" src="${
+              course.img
+            }" alt="course img" width="150px" height="60px">
+        </td>
+        <td colspan="40%">${course.title}</td>
+        <td colspan="15%">${course.price}</td>
+        <td colspan="15%"><span class="btn btn-sm btn-remove" data-uid="${
+          course.id
+        }">X</span></td>
+    </tr>
+  `;
+
+  courseCart.insertAdjacentHTML("beforeend", courseInHTML);
 }
 ```
