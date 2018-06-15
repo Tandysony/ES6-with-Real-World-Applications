@@ -55,11 +55,17 @@ function removeCourse(e) {
   e.stopPropagation();
 }
 
-// clear cart
+// clear courses
 function clearCourses(e) {
   e.preventDefault();
 
-  courseCart.innerHTML = "";
+  // courseCart.innerHTML = ""; // not recommended
+
+  // recommended
+  while (courseCart.firstChild) {
+    courseCart.removeChild(courseCart.firstChild);
+  }
+
   localStorage.removeItem(keyInLS);
   e.stopPropagation();
 }
@@ -83,7 +89,7 @@ function addCourseToCart(course) {
         <td colspan="30%">
             <img class="img-responsive" src="${
               course.img
-            }" alt="course img" width="125px" height="60px">
+            }" alt="course img" width="150px" height="60px">
         </td>
         <td colspan="40%">${course.title}</td>
         <td colspan="15%">${course.price}</td>
@@ -99,32 +105,30 @@ function addCourseToCart(course) {
 function addCourseToLocalStorage(course) {
   let courseInLS = getCourseFromLocalStorage();
 
-  if (courseInLS === null) {
-    courseInLS = [];
-  }
-
   courseInLS.push(course);
   localStorage.setItem(keyInLS, JSON.stringify(courseInLS));
 }
 
 function getCourseFromLocalStorage() {
-  return JSON.parse(localStorage.getItem(keyInLS));
+  let courses = [];
+
+  if (localStorage.getItem(keyInLS) !== null) {
+    courses = JSON.parse(localStorage.getItem(keyInLS));
+  }
+
+  return courses;
 }
 
 function initCoursesFromLocalStorage() {
   const courseInLS = getCourseFromLocalStorage();
 
-  if (courseInLS !== null) {
-    courseInLS.forEach(function(course) {
-      addCourseToCart(course);
-    });
-  }
+  courseInLS.forEach(course => addCourseToCart(course));
 }
 
 function removeCourseFromLocalStorage(uid) {
   let courseInLS = getCourseFromLocalStorage();
 
-  courseInLS.forEach(function(el, index) {
+  courseInLS.forEach((el, index) => {
     if (el.id === uid) {
       courseInLS.splice(index, 1);
     }
