@@ -57,9 +57,9 @@ function addCourseToCart(course) {
         </td>
         <td colspan="40%">${course.title}</td>
         <td colspan="15%">${course.price}</td>
-        <td colspan="15%"><span class="btn btn-remove" data-uid="${
+        <td colspan="15%"><span class="btn btn-sm btn-remove" data-uid="${
           course.id
-        }">x</span></td>
+        }">X</span></td>
     </tr>
   `;
 

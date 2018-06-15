@@ -23,6 +23,12 @@
   padding: 16px;
 }
 
+.cart .btn-remove {
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+
 #btn-clear-cart {
   margin-top: 20px;
 }
