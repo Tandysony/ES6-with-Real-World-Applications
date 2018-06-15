@@ -4,6 +4,7 @@ const courseCart = document.querySelector(".course-chosen");
 const clearCart = document.querySelector("#btn-clear-cart");
 const searchBox = document.querySelector("#search-term");
 const allCourse = document.querySelectorAll(".course");
+const badge = document.querySelector(".shopping-cart .badge");
 const keyInLS = "myCourses";
 
 /* -------- EVENT LISTENER -------- */
@@ -44,6 +45,8 @@ function saveCourse(e) {
 
     // add the course to shopping cart
     addCourseToCart(courseInfo);
+
+    updateBadge();
   }
 }
 
@@ -54,6 +57,8 @@ function removeCourse(e) {
   if (e.target.classList.contains("btn-remove")) {
     e.target.parentNode.parentNode.remove();
   }
+
+  updateBadge();
 
   // remove the course from local storage by the course ID
   removeCourseFromLocalStorage(e.target.getAttribute("data-uid"));
@@ -70,6 +75,8 @@ function clearCourses(e) {
   while (courseCart.firstChild) {
     courseCart.removeChild(courseCart.firstChild);
   }
+
+  updateBadge();
 
   localStorage.removeItem(keyInLS);
   e.stopPropagation();
@@ -128,6 +135,8 @@ function initCoursesFromLocalStorage() {
   const courseInLS = getCourseFromLocalStorage();
 
   courseInLS.forEach(course => addCourseToCart(course));
+
+  updateBadge();
 }
 
 function removeCourseFromLocalStorage(uid) {
@@ -158,4 +167,14 @@ function filterCourses(e) {
       course.style.display = "none";
     }
   });
+}
+
+function updateBadge() {
+  const count = courseCart.children.length;
+  badge.textContent = count;
+  if (count > 0) {
+    badge.style.display = "inline";
+  } else {
+    badge.style.display = "none";
+  }
 }
