@@ -3,7 +3,7 @@
 }
 
 #course-categories a > i {
-  padding-right: 12px;
+  padding-right: 4px;
 }
 
 #course-categories .dropdown-menu li {
@@ -21,15 +21,23 @@
 
 /* shopping cart */
 
-.cart {
+.shopping-cart .fa-shopping-cart {
+  color: var(--ured);
+}
+
+.shopping-cart .badge {
+  display: none;
+}
+
+.shopping-cart .cart {
   width: 340px;
   min-height: 400px;
   padding: 16px;
 }
 
-.cart .btn-remove {
+.shopping-cart .cart .btn-remove {
   border-radius: 50%;
-  background: red;
+  background: var(--ured);
   color: white;
 }
 
