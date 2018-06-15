@@ -52,7 +52,6 @@
                                     Art</a>
                             </li>
                             <li>
-
                                 <a href="#">
                                     <i class="fa fa-lg fa-music" aria-hidden="true"></i>
                                     Music</a>
@@ -90,7 +89,9 @@
                                     </thead>
                                     <tbody class="course-chosen">
                                         <tr>
-                                            <td colspan="30%">img</td>
+                                            <td colspan="30%">
+                                                <img class="img-responsive" src="https://picsum.photos/250/120" alt="" width="125px" height="60px">
+                                            </td>
                                             <td colspan="40%">Learn Javascript the hard way</td>
                                             <td colspan="15%">$12.99</td>
                                             <td colspan="15%">x</td>
@@ -124,8 +125,8 @@
 
     <!-- course grid -->
     <h1 class="text-center">Featured Courses</h1>
-    <section id="courses-list" class="courses">
-        <div class="course">
+    <section id="course-list" class="courses">
+        <div class="course" data-uid="227">
             <img class="img-responsive" src="https://picsum.photos/250/120" alt="">
             <div class="course-detail">
                 <div class="course-title">Design Patterns in C#</div>
@@ -137,10 +138,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="229">
             <img class="img-responsive" src="https://picsum.photos/250/121" alt="">
             <div class="course-detail">
                 <div class="course-title">How To Write Bulletproof Multi-Threaded C# Code</div>
@@ -152,10 +153,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="230">
             <img class="img-responsive" src="https://picsum.photos/250/122" alt="">
             <div class="course-detail">
                 <div class="course-title">Learn Modern JavaScript: Advanced Topics</div>
@@ -167,10 +168,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="245">
             <img class="img-responsive" src="https://picsum.photos/250/123" alt="">
             <div class="course-detail">
                 <div class="course-title">Bootstrap 4 From Scratch With 5 Projects</div>
@@ -182,10 +183,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="235">
             <img class="img-responsive" src="https://picsum.photos/250/124" alt="">
             <div class="course-detail">
                 <div class="course-title">Advanced CSS and Sass: Flexbox, Grid, Animations and More!</div>
@@ -197,10 +198,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="236">
             <img class="img-responsive" src="https://picsum.photos/250/125" alt="">
             <div class="course-detail">
                 <div class="course-title">PHP for Beginners - Become a PHP Master - CMS Project</div>
@@ -212,10 +213,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="238">
             <img class="img-responsive" src="https://picsum.photos/250/126" alt="">
             <div class="course-detail">
                 <div class="course-title">Microsoft Excel - Excel from Beginner to Advanced</div>
@@ -227,10 +228,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="239">
             <img class="img-responsive" src="https://picsum.photos/250/127" alt="">
             <div class="course-detail">
                 <div class="course-title">React 16 - The Complete Guide (incl. React Router 4 & Redux)</div>
@@ -242,10 +243,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="240">
             <img class="img-responsive" src="https://picsum.photos/250/128" alt="">
             <div class="course-detail">
                 <div class="course-title">Fundamentals of FeathersJS</div>
@@ -257,10 +258,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="241">
             <img class="img-responsive" src="https://picsum.photos/250/129" alt="">
             <div class="course-detail">
                 <div class="course-title">Full Stack Web Developer Bootcamp</div>
@@ -272,10 +273,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="242">
             <img class="img-responsive" src="https://picsum.photos/250/130" alt="">
             <div class="course-detail">
                 <div class="course-title">The Agile Samurai Bootcamp</div>
@@ -287,10 +288,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="243">
             <img class="img-responsive" src="https://picsum.photos/250/131" alt="">
             <div class="course-detail">
                 <div class="course-title">The Ultimate Drawing Course - Beginner to Advanced</div>
@@ -302,10 +303,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="244">
             <img class="img-responsive" src="https://picsum.photos/250/132" alt="">
             <div class="course-detail">
                 <div class="course-title">Data Structures in JavaScript</div>
@@ -317,10 +318,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="245">
             <img class="img-responsive" src="https://picsum.photos/250/133" alt="">
             <div class="course-detail">
                 <div class="course-title">Modern JavaScript From The Beginning</div>
@@ -332,10 +333,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="246">
             <img class="img-responsive" src="https://picsum.photos/250/134" alt="">
             <div class="course-detail">
                 <div class="course-title">Accounting 101: Advanced Finance and Accounting for Startups</div>
@@ -347,10 +348,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="247">
             <img class="img-responsive" src="https://picsum.photos/250/135" alt="">
             <div class="course-detail">
                 <div class="course-title">Ultimate Entrepreneurship Guide - Entrepreneurship Explained</div>
@@ -362,10 +363,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="248">
             <img class="img-responsive" src="https://picsum.photos/250/136" alt="">
             <div class="course-detail">
                 <div class="course-title">JavaScript Interview Prep: Practice Problems</div>
@@ -377,10 +378,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="249">
             <img class="img-responsive" src="https://picsum.photos/250/137" alt="">
             <div class="course-detail">
                 <div class="course-title">Fundamentals of FeathersJS</div>
@@ -392,10 +393,10 @@
                     <span class="original"> $198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="250">
             <img class="img-responsive" src="https://picsum.photos/250/138" alt="">
             <div class="course-detail">
                 <div class="course-title">PMP EXAM PREP-Project Management Professional FULL TRAINING</div>
@@ -407,10 +408,10 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
-        <div class="course">
+        <div class="course" data-uid="251">
             <img class="img-responsive" src="https://picsum.photos/250/139" alt="">
             <div class="course-detail">
                 <div class="course-title">Startup Masterclass: The Ultimate Guide For Young Startups</div>
@@ -422,7 +423,7 @@
                     <span class="original">$198.99</span>
                     <span class="now">$12.99</span>
                 </div>
-                <button class="btn btn-primary btn-block add-course">Add to Cart</button>
+                <button class="btn btn-primary btn-block btn-add-course">Add to Cart</button>
             </div>
         </div>
     </section>
