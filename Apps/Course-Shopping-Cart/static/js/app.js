@@ -2,6 +2,7 @@
 const courseList = document.querySelector("#course-list");
 const courseCart = document.querySelector(".course-chosen");
 const clearCart = document.querySelector("#btn-clear-cart");
+const keyInLS = "myCourses";
 
 /* -------- EVENT LISTENER -------- */
 loadEeventListner();
@@ -9,6 +10,12 @@ loadEeventListner();
 function loadEeventListner() {
   // add course
   courseList.addEventListener("click", saveCourse);
+
+  // remove course
+  courseCart.addEventListener("click", removeCourse);
+
+  // clear course
+  clearCart.addEventListener("click", clearCourses);
 
   // load local storage data on page loaded
   document.addEventListener("DOMContentLoaded", initCoursesFromLocalStorage);
@@ -35,6 +42,29 @@ function saveCourse(e) {
   }
 }
 
+// remove the chosen course
+function removeCourse(e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains("btn-remove")) {
+    e.target.parentNode.parentNode.remove();
+  }
+
+  // remove the course from local storage by the course ID
+  removeCourseFromLocalStorage(e.target.getAttribute("data-uid"));
+  e.stopPropagation();
+}
+
+// clear cart
+function clearCourses(e) {
+  e.preventDefault();
+
+  courseCart.innerHTML = "";
+  localStorage.removeItem(keyInLS);
+  e.stopPropagation();
+}
+
+// get the information of the chosen course
 function getChosenCourse(course) {
   // create an course object to store the course information
   const courseInfo = {
@@ -63,7 +93,7 @@ function addCourseToCart(course) {
     </tr>
   `;
 
-  courseCart.insertAdjacentHTML("afterend", courseInHTML);
+  courseCart.insertAdjacentHTML("beforeend", courseInHTML);
 }
 
 function addCourseToLocalStorage(course) {
@@ -74,11 +104,11 @@ function addCourseToLocalStorage(course) {
   }
 
   courseInLS.push(course);
-  localStorage.setItem("myCourses", JSON.stringify(courseInLS));
+  localStorage.setItem(keyInLS, JSON.stringify(courseInLS));
 }
 
 function getCourseFromLocalStorage() {
-  return JSON.parse(localStorage.getItem("myCourses"));
+  return JSON.parse(localStorage.getItem(keyInLS));
 }
 
 function initCoursesFromLocalStorage() {
@@ -89,4 +119,16 @@ function initCoursesFromLocalStorage() {
       addCourseToCart(course);
     });
   }
+}
+
+function removeCourseFromLocalStorage(uid) {
+  let courseInLS = getCourseFromLocalStorage();
+
+  courseInLS.forEach(function(el, index) {
+    if (el.id === uid) {
+      courseInLS.splice(index, 1);
+    }
+
+    localStorage.setItem(keyInLS, JSON.stringify(courseInLS));
+  });
 }
