@@ -2,6 +2,8 @@
 const courseList = document.querySelector("#course-list");
 const courseCart = document.querySelector(".course-chosen");
 const clearCart = document.querySelector("#btn-clear-cart");
+const searchBox = document.querySelector("#search-term");
+const allCourse = document.querySelectorAll(".course");
 const keyInLS = "myCourses";
 
 /* -------- EVENT LISTENER -------- */
@@ -19,6 +21,9 @@ function loadEeventListner() {
 
   // load local storage data on page loaded
   document.addEventListener("DOMContentLoaded", initCoursesFromLocalStorage);
+
+  // filter course
+  searchBox.addEventListener("keyup", filterCourses);
 }
 
 /* -------- FUNCTIONS -------- */
@@ -134,5 +139,23 @@ function removeCourseFromLocalStorage(uid) {
     }
 
     localStorage.setItem(keyInLS, JSON.stringify(courseInLS));
+  });
+}
+
+function filterCourses(e) {
+  e.preventDefault();
+
+  const q = searchBox.value.toLowerCase();
+  allCourse.forEach(course => {
+    if (
+      course
+        .querySelector(".course-title")
+        .textContent.toLowerCase()
+        .includes(q)
+    ) {
+      course.style.display = "grid";
+    } else {
+      course.style.display = "none";
+    }
   });
 }
