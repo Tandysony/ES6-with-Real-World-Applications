@@ -17,7 +17,7 @@
 
 #### Tips
 
-1.  User `element.dataset.dataName` to access the `data-` attribute. For example
+1.  User `element.getAttribute(data-dt-name)` or `element.dataset.dtName` to access the `data-dt-name` attribute. For example
 
 ```html
 <article
@@ -29,7 +29,15 @@
 </article>
 ```
 
-To get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that **_dashes are converted to camelCase_**).
+```js
+var article = document.getElementById("electriccars");
+
+article.getAttribute("data-columns"); // "3"
+article.getAttribute("data-index-number"); // "12314"
+article.getAttribute("data-parent"); // "cars"
+```
+
+Or, to get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that **_dashes are converted to camelCase_**).
 
 ```js
 var article = document.getElementById("electriccars");
