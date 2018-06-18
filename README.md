@@ -61,6 +61,14 @@
 39. [Pseudoclassical Patterns](OOP/39-pseudoclassical_patterns.md)
 40. [Superclass and Subclass](OOP/40-superclass_and_subclass.md)
 
+### Functional Programming
+
+- [TODO]
+
+### Declarative Programming v.s. Imperative Programming
+
+- [TODO]: JQuery v.s. React/Vue
+
 ### DOM Manipulation
 
 41. [DOM Manipulation](DOM-manipulation/41-dom_manipulation.md)
