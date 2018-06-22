@@ -67,7 +67,8 @@
 
 ### Declarative Programming v.s. Imperative Programming
 
-- [TODO]: JQuery v.s. React/Vue
+- [TODO]: Benefits and Drawbacks
+- [TODO]: Query v.s. React/Vue
 
 ### DOM Manipulation
 
@@ -79,6 +80,7 @@
 44. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
 45. [HTML5 Responsive Webpage with CSS Grid Layout](https://github.com/Tandysony/Try-Out-CSS-Grid-Layout)
 46. [Interactive Course Shopping Cart](Apps/Course-Shopping-Cart/course_shopping_cart.md)
+47. [Migrate an App to VueJS](Apps/Migrate-App-To-VueJS/migrate-an-app-to-vuejs.md)
 
 ## References
 
