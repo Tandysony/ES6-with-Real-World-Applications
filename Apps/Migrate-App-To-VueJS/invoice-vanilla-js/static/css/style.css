@@ -82,6 +82,10 @@
   box-shadow: 3px 3px rgb(196, 200, 205);
 }
 
+.invoice-box .pull-left {
+  float: left;
+}
+
 .invoice-box .btn-add-row:hover,
 .invoice-box .btn-add-row:active {
   font-size: 14px;
