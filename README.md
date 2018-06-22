@@ -63,7 +63,7 @@
 
 ### Functional Programming
 
-- [TODO]
+-
 
 ### Declarative Programming v.s. Imperative Programming
 
