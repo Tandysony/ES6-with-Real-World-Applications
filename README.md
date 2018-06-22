@@ -63,7 +63,7 @@
 
 ### Functional Programming
 
--
+41. [Map, Filter, Reduce functions](FP/map-filter-reduce.md)
 
 ### Declarative Programming v.s. Imperative Programming
 
@@ -71,14 +71,14 @@
 
 ### DOM Manipulation
 
-41. [DOM Manipulation](DOM-manipulation/41-dom_manipulation.md)
-42. [Best Practice on DOM Manipulation](DOM-manipulation/42-best_practice_on_dom.md)
+42. [DOM Manipulation](DOM-manipulation/41-dom_manipulation.md)
+43. [Best Practice on DOM Manipulation](DOM-manipulation/42-best_practice_on_dom.md)
 
 ### Real World Applications
 
-43. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
-44. [HTML5 Responsive Webpage with CSS Grid Layout](https://github.com/Tandysony/Try-Out-CSS-Grid-Layout)
-45. [Interactive Course Shopping Cart](Apps/Course-Shopping-Cart/course_shopping_cart.md)
+44. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
+45. [HTML5 Responsive Webpage with CSS Grid Layout](https://github.com/Tandysony/Try-Out-CSS-Grid-Layout)
+46. [Interactive Course Shopping Cart](Apps/Course-Shopping-Cart/course_shopping_cart.md)
 
 ## References
 
