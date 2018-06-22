@@ -52,7 +52,7 @@ article.dataset.indexNumber; // "12314"
 article.dataset.parent; // "cars"
 ```
 
-2.  No need to add event listener to each button. Instead, use `e.target.classList.contains("className")` to verify is a button is clicked.
+2.  No need to add event listener to each button. Instead, use `e.target.classList.contains("className")` to verify if a button is clicked.
 
 ```js
 const courseList = document.querySelector("#course-list");
