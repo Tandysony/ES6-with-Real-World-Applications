@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+
+<body>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="4">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="https://www.sparksuite.com/images/logo.png" style="width:100%; max-width:300px;">
+                            </td>
+
+                            <td>
+                                Invoice #: 123
+                                <br> Created: January 1, 2015
+                                <br> Due: February 1, 2015
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr class="information">
+                <td colspan="4">
+                    <table>
+                        <tr>
+                            <td>
+                                Sparksuite, Inc.
+                                <br> 12345 Sunny Road
+                                <br> Sunnyville, CA 12345
+                            </td>
+
+                            <td>
+                                Acme Corp.
+                                <br> Tandy Tan
+                                <br> tandy.t@example.com
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr class="heading">
+                <td colspan="3">
+                    Payment Method
+                </td>
+
+                <td>
+                    Credit Card #
+                </td>
+            </tr>
+
+            <tr class="details">
+                <td colspan="3">
+                    Credit Card
+                </td>
+
+                <td>
+                    5XXXXXXXXXXXXXX3
+                </td>
+            </tr>
+
+            <tr class="heading">
+                <td>
+                    Item
+                </td>
+
+                <td>
+                    Unit Cost
+                </td>
+
+                <td>
+                    Quantity
+                </td>
+
+                <td>
+                    Price
+                </td>
+            </tr>
+
+            <tr class="item">
+                <td>
+                    <input value="Website design" />
+                </td>
+
+                <td>
+                    $
+                    <input type="number" min="0" value="300" />
+                </td>
+
+                <td>
+                    <input type="number" min="0" value="1" />
+                </td>
+
+                <td>
+                    $300.00
+                </td>
+            </tr>
+
+            <tr class="item">
+                <td>
+                    <input value="Hosting (3 months)" />
+                </td>
+
+                <td>
+                    $
+                    <input type="number" min="0" value="75" />
+                </td>
+
+                <td>
+                    <input type="number" min="0" value="1" />
+                </td>
+
+                <td>
+                    $75.00
+                </td>
+            </tr>
+
+            <tr class="item">
+                <td>
+                    <input value="Domain name (1 year)" />
+                </td>
+
+                <td>
+                    $
+                    <input type="number" min="0" value="10" />
+                </td>
+
+                <td>
+                    <input type="number" min="0" value="1" />
+                </td>
+
+                <td>
+                    $10.00
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <button class="btn-add-row">Add row</button>
+                </td>
+            </tr>
+
+            <tr class="total">
+                <td colspan="3"></td>
+
+                <td>
+                    Total: $385.00
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./static/js/main.js"></script>
+</body>
+
+</html>
