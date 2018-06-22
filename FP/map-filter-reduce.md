@@ -1,4 +1,4 @@
-# JavaScript’s Map, Reduce, and Filter
+# JavaScript’s Map, Reduce, Filter and Sort
 
 In 2011, JavaScript introduced `map`, `reduce`, and `filter` as powerful alternatives when translating elements, finding cumulative values, or building subsets based on conditions. They make code less complex, without side effects, and often more readable.
 
@@ -99,3 +99,19 @@ sum; // 85
 ```
 
 The `0` is the initial value.
+
+## `sort`
+
+The `sort()` method sorts the elements of an array **in place** and returns **the array**. The default sort order is according to string Unicode code points.
+
+The sort method can be conveniently used with function expressions (and closures):
+
+```js
+var numbers = [4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+  return a - b;
+});
+console.log(numbers);
+
+// [1, 2, 3, 4, 5]
+```
