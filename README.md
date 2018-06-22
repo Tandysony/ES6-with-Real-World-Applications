@@ -63,7 +63,7 @@
 
 ### Functional Programming
 
-41. [Map, Filter, Reduce functions](FP/map-filter-reduce.md)
+41. [Map, Filter, Reduce and Sort Functions](FP/map_filter_reduce_sort.md)
 
 ### Declarative Programming v.s. Imperative Programming
 

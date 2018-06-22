@@ -115,3 +115,44 @@ console.log(numbers);
 
 // [1, 2, 3, 4, 5]
 ```
+
+### Use them all together
+
+```js
+const companies = [
+  {
+    guid: "d5214634-5be8-4cfc-a347-958ea3ce9051",
+    age: 15,
+    company: "TELEQUIET"
+  },
+  {
+    guid: "54371845-c487-4c8c-b427-0dff23137bd7",
+    age: 24,
+    company: "COMVENE"
+  },
+  {
+    guid: "425f3a1c-d911-4866-9e1f-15449874282c",
+    age: 10,
+    company: "SURETECH"
+  },
+  {
+    guid: "2f07797b-94c9-496a-b503-19f5b00fc621",
+    age: 3,
+    company: "FLEXIGEN"
+  },
+  {
+    guid: "cd6f5f5c-ae27-4dc4-b501-3657231c74a3",
+    age: 35,
+    company: "INSECTUS"
+  }
+];
+
+const totalYear = companies
+  .sort((a, b) => a.age - b.age)
+  .filter(el => el.age >= 10)
+  .reduce((sum, el) => sum + el.age, 0);
+
+console.log(totalYear);
+
+// Print: 84
+```
