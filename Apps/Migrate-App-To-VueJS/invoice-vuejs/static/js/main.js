@@ -30,10 +30,9 @@ const app = new Vue({
     },
     // calculate total
     total() {
-      return this.items.reduce(
-        (acc, item) =>
-          (acc + item.price * item.quantity) * (1 + this.tax / 100),
-        0
+      return (
+        this.items.reduce((acc, item) => acc + item.price * item.quantity, 0) *
+        (1 + this.tax / 100)
       );
     }
   },
