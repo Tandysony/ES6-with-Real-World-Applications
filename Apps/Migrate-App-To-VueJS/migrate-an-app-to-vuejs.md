@@ -16,9 +16,9 @@
 
 #### Source code
 
-The source code in vanilla JavaScript can be found [here](Apps/Migrate-App-To-VueJS/invoice-vanilla-js)
+The source code in vanilla JavaScript can be found [here](../Migrate-App-To-VueJS/invoice-vanilla-js)
 
-The source code in Vue.js can be found [here](Apps/Migrate-App-To-VueJS/invoice-vuejs). Please be noted, this version does not involve `vue-cli` and `Webpack` tools.
+The source code in Vue.js can be found [here](../Migrate-App-To-VueJS/invoice-vuejs). Please be noted, this version does not involve `vue-cli` and `Webpack` tools.
 
 ## Summary & Tips
 
