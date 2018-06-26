@@ -186,6 +186,48 @@ In the example above, we use `Object.assign()` and pass in an empty object as th
 
 > **Remove function call timing dependency, and you eliminate an entire class of potential bugs.**
 
+### 4. Immutability
+
+An **immutable** object is an object that can’t be modified after it’s created. Immutability is important to make sure one function does not change the original data rather than should return new copy of the data after manipulation.
+
+In JavaScript, it’s important not to confuse `const`, with **immutability**. `const` creates a variable name binding which can’t be reassigned after creation. `const` does not create immutable objects. You can’t change the object that the binding refers to, but you can still change the properties of the object, which means that **bindings created with `const` are mutable, not immutable**.
+
+Immutable objects can’t be changed at all. You can make a value truly immutable by deep freezing the object. JavaScript has a method that freezes an object **one-level deep**:
+
+```js
+const a = Object.freeze({
+  foo: "Hello",
+  bar: "world",
+  baz: "!"
+});
+
+a.foo = "Goodbye";
+// Error: Cannot assign to read only property 'foo' of object Object
+```
+
+But `frozen` objects are only **superficially immutable**. For example, the following object is mutable:
+
+```js
+const a = Object.freeze({
+  foo: { greeting: "Hello" },
+  bar: "world",
+  baz: "!"
+});
+
+a.foo.greeting = "Goodbye";
+
+console.log(`${a.foo.greeting}, ${a.bar}${a.baz}`);
+```
+
+As you can see, the top level primitive properties of a frozen object can’t change, but any property which is also an object (including arrays, etc…) can still be mutated — so even frozen objects are not immutable unless you walk the whole object tree and freeze every object property.
+
+JavaScript by-default does not provide anything to make the object and array Immutable. There are libraries which can help us to achieve the immutability.
+
+- [Seamless-immutable](https://github.com/rtfeldman/seamless-immutable)
+- [Immutable JS](https://github.com/facebook/immutable-js)
+
 ## References
 
 - [Master the JavaScript Interview: What is Functional Programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
+
+- [Functional Programming](https://github.com/npatro/functional-programming)
