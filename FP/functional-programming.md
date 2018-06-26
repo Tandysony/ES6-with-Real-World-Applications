@@ -49,6 +49,66 @@ Pure functions have many beneficial properties, and form the foundation of funct
 
 - Their independent nature also makes them great candidates for parallel processing across many CPUs, and across entire distributed computing clusters, which makes them essential for many types of scientific and resource-intensive computing tasks.
 
+### Function Composition
+
+Function composition is the process of combining two or more functions in order to produce a new function or perform some computation. For example, the composition `f . g` (the dot means “composed with”) is equivalent to `f(g(x))` in JavaScript. It evaluates from the **inside out — right to left**. In other words, the evaluation order is:
+
+    1. `x`
+    2. `g`
+    3. `f`
+
+Let’s look at this more closely in code. Imagine you want to convert user’s full names to URL slugs to give each of your users a profile page. In order to do that, you need to walk through a series of steps:
+
+    1. split the name into an array on spaces
+    2. map the name to lower case
+    3. join with dashes
+    4. encode the URI component
+
+Here’s a simple implementation:
+
+```js
+const toSlug = input =>
+  encodeURIComponent(
+    input
+      .split(" ")
+      .map(str => str.toLowerCase())
+      .join("-")
+  );
+```
+
+Not bad… but what if I told you it could be more readable?
+
+Imagine each of these operations had a corresponding composable function. This could be written as:
+
+```js
+const toSlug = input =>
+  encodeURIComponent(join("-")(map(toLowerCase)(split(" ")(input))));
+
+console.log(toSlug("JS Cheerleader")); // 'js-cheerleader'
+```
+
+This looks even harder to read than our first attempt, but hang in there, this is going somewhere.
+
+In order to accomplish this, we’re using composable forms of common utilities like `split()`, `join()` and `map()`. Here are the implementations:
+
+```js
+const curry = fn => (...args) => fn.bind(null, ...args);
+
+const map = curry((fn, arr) => arr.map(fn));
+
+const join = curry((str, arr) => arr.join(str));
+
+const toLowerCase = str => str.toLowerCase();
+
+const split = curry((splitOn, str) => str.split(splitOn));
+```
+
+With the exception of `toLowerCase()`, production-tested versions of all of these functions are available from `Lodash/fp`. You can import them like this:
+
+```js
+import { curry, map, join, split } from "lodash/fp";
+```
+
 ## References
 
 - [Master the JavaScript Interview: What is Functional Programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
