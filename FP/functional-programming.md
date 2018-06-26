@@ -226,6 +226,36 @@ JavaScript by-default does not provide anything to make the object and array Imm
 - [Seamless-immutable](https://github.com/rtfeldman/seamless-immutable)
 - [Immutable JS](https://github.com/facebook/immutable-js)
 
+### 5. Side Effects
+
+A side effect is any application state change that is observable outside the called function other than its return value. Side effects include:
+
+- Modifying any external variable or object property (e.g., a global variable, or a variable in the parent function scope chain)
+- Logging to the console
+- Writing to the screen
+- Writing to a file
+- Writing to the network
+- Triggering any external process
+- Calling any other functions with side-effects
+
+Side effects are mostly avoided in functional programming, which makes the effects of a program much easier to understand, and much easier to test.
+
+What you do need to know right now is that side-effect actions need to be isolated from the rest of your software.If you keep your side effects separate from the rest of your program logic, your software will be much easier to extend, refactor, debug, test, and maintain.
+
+This is the reason that most front-end frameworks encourage users to manage state and component rendering in separate, loosely coupled modules.
+
+## Conclusion
+
+Functional programming favors:
+
+* Pure functions instead of shared state & side effects
+* Immutability over mutable data
+* Function composition over imperative flow control
+* Lots of generic, reusable utilities that use higher order functions to act on many data types instead of methods that only operate on their colocated data
+* Declarative rather than imperative code (what to do, rather than how to do it)
+* Expressions over statements
+* Containers & higher order functions over ad-hoc polymorphism
+
 ## References
 
 - [Master the JavaScript Interview: What is Functional Programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
