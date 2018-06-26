@@ -33,7 +33,9 @@ console.log(double(5)); // 10
 
 So, `console.log( double(5) );` is the same as `console.log(10);`
 
-This is true because `double()` is a **pure function**, but if `double()` had side-effects, such as saving the value to disk or logging to the console, you couldn’t simply replace `double(5)` with 10 without changing the meaning.
+This is true because `double()` is a **pure function**, but if `double()` had side-effects, such as saving the value to disk or logging to the console, you couldn’t simply replace `double(5)` with `10` without changing the meaning.
+
+`Math.random()` is **not** pure function because it always returns new value on each call.
 
 If you want referential transparency, you need to use pure functions.
 A pure function is a function which:
@@ -49,7 +51,7 @@ Pure functions have many beneficial properties, and form the foundation of funct
 
 - Their independent nature also makes them great candidates for parallel processing across many CPUs, and across entire distributed computing clusters, which makes them essential for many types of scientific and resource-intensive computing tasks.
 
-### Function Composition
+### 2. Function Composition
 
 Function composition is the process of combining two or more functions in order to produce a new function or perform some computation. For example, the composition `f . g` (the dot means “composed with”) is equivalent to `f(g(x))` in JavaScript. It evaluates from the **inside out — right to left**. In other words, the evaluation order is:
 
@@ -108,6 +110,81 @@ With the exception of `toLowerCase()`, production-tested versions of all of thes
 ```js
 import { curry, map, join, split } from "lodash/fp";
 ```
+
+### 3. Shared State
+
+**Shared state** is any variable, object, or memory space that exists in a shared scope, or as the property of an object being passed between scopes. A shared scope can include global scope or closure scopes. Often, in object oriented programming, objects are shared between scopes by adding properties to other objects.
+
+**Shared state** are timing dependent:
+
+```js
+// With shared state, the order in which function calls are made
+// changes the result of the function calls.
+const x = {
+  val: 2
+};
+
+const x1 = () => (x.val += 1);
+
+const x2 = () => (x.val *= 2);
+
+x1();
+x2();
+
+console.log(x.val); // 6
+
+// This example is exactly equivalent to the above, except...
+const y = {
+  val: 2
+};
+
+const y1 = () => (y.val += 1);
+
+const y2 = () => (y.val *= 2);
+
+// ...the order of the function calls is reversed...
+y2();
+y1();
+
+// ... which changes the resulting value:
+console.log(y.val); // 5
+```
+
+A change in one function, or the timing of a function call won’t ripple out and break other parts of the program.
+
+```js
+const x = {
+  val: 2
+};
+
+const x1 = x => Object.assign({}, x, { val: x.val + 1 });
+
+const x2 = x => Object.assign({}, x, { val: x.val * 2 });
+
+console.log(x1(x2(x)).val); // 5
+
+const y = {
+  val: 2
+};
+
+// Since there are no dependencies on outside variables,
+// we don't need different functions to operate on different
+// variables.
+
+// this space intentionally left blank
+
+// Because the functions don't mutate, you can call these
+// functions as many times as you want, in any order,
+// without changing the result of other function calls.
+x2(y);
+x1(y);
+
+console.log(x1(x2(y)).val); // 5
+```
+
+In the example above, we use `Object.assign()` and pass in an empty object as the first parameter to copy the properties of `x` instead of mutating it in place.
+
+> **Remove function call timing dependency, and you eliminate an entire class of potential bugs.**
 
 ## References
 
