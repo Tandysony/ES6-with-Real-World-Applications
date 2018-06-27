@@ -10,7 +10,7 @@
 - User can add change an items information
 - Recalculate the prices whenever a user changes an item's unit cost or quantity
 
-#### The vanilla JavaScript implementation is demonstrated bellow
+#### The implementation is demonstrated bellow
 
 ![Invoice of the vanilla JavaScript Implementation](./img/invoice-vanilla-js.gif)
 
