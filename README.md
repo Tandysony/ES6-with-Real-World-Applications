@@ -2,7 +2,7 @@
 
 - Tandy Suo Tan
 
-### Lecture notes taken for the Udacity courses: [ES6 - JavaScript Improved](https://www.udacity.com/course/es6-javascript-improved--ud356) and [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015)
+### I have been using JavaScript for years, and started using Vue.js recently. However, I haven't done a thurough study on the ES6 baseics. Here is the chance to start. This repo includes the lecture notes taken for the Udacity courses: [ES6 - JavaScript Improved](https://www.udacity.com/course/es6-javascript-improved--ud356) and [Object-Oriented JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud015), plus a few real world applicaitons.
 
 ## Table of Contents
 
