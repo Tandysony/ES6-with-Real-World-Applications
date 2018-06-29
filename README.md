@@ -63,7 +63,8 @@
 
 ### Functional Programming
 
-41. [Map, Filter, Reduce and Sort Functions](FP/map_filter_reduce_sort.md)
+41. [On Function Programming](FP/functional-programming.md)
+42. [Map, Filter, Reduce and Sort Functions](FP/map_filter_reduce_sort.md)
 
 ### Declarative Programming v.s. Imperative Programming
 
@@ -72,15 +73,15 @@
 
 ### DOM Manipulation
 
-42. [DOM Manipulation](DOM-manipulation/41-dom_manipulation.md)
-43. [Best Practice on DOM Manipulation](DOM-manipulation/42-best_practice_on_dom.md)
+43. [DOM Manipulation](DOM-manipulation/41-dom_manipulation.md)
+44. [Best Practice on DOM Manipulation](DOM-manipulation/42-best_practice_on_dom.md)
 
 ### Real World Applications
 
-44. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
-45. [HTML5 Responsive Webpage with CSS Grid Layout](https://github.com/Tandysony/Try-Out-CSS-Grid-Layout)
-46. [Interactive Course Shopping Cart](Apps/Course-Shopping-Cart/course_shopping_cart.md)
-47. [Migrate an App to VueJS](Apps/Migrate-App-To-VueJS/migrate-an-app-to-vuejs.md)
+45. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
+46. [HTML5 Responsive Webpage with CSS Grid Layout](https://github.com/Tandysony/Try-Out-CSS-Grid-Layout)
+47. [Interactive Course Shopping Cart](Apps/Course-Shopping-Cart/course_shopping_cart.md)
+48. [Migrate an App to VueJS](Apps/Migrate-App-To-VueJS/migrate-an-app-to-vuejs.md)
 
 ## References
 
