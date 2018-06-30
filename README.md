@@ -68,8 +68,7 @@
 
 ### Declarative Programming v.s. Imperative Programming
 
-- [TODO]: Benefits and Drawbacks
-- [TODO]: jQuery v.s. React/Vue
+43. [Declarative vs Imperative Programming](Declarative-vs-Imperative/declarative-vs-imperative.md)
 
 ### DOM Manipulation
 
