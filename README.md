@@ -69,18 +69,19 @@
 ### Declarative Programming v.s. Imperative Programming
 
 43. [Declarative vs Imperative Programming](Declarative-vs-Imperative/declarative-vs-imperative.md)
+44. [jQuery vs Vue.js](Declarative-vs-Imperative/jQuery-vs-vuejs.md)
 
 ### DOM Manipulation
 
-43. [DOM Manipulation](DOM-manipulation/41-dom_manipulation.md)
-44. [Best Practice on DOM Manipulation](DOM-manipulation/42-best_practice_on_dom.md)
+45. [DOM Manipulation](DOM-manipulation/41-dom_manipulation.md)
+46. [Best Practice on DOM Manipulation](DOM-manipulation/42-best_practice_on_dom.md)
 
 ### Real World Applications
 
-45. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
-46. [HTML5 Responsive Webpage with CSS Grid Layout](https://github.com/Tandysony/Try-Out-CSS-Grid-Layout)
-47. [Interactive Course Shopping Cart](Apps/Course-Shopping-Cart/course_shopping_cart.md)
-48. [Migrate an App to VueJS](Apps/Migrate-App-To-VueJS/migrate-an-app-to-vuejs.md)
+47. [Simple Tweet Application using LocalStorage](Apps/LocalStorage/local-storage.md)
+48. [HTML5 Responsive Webpage with CSS Grid Layout](https://github.com/Tandysony/Try-Out-CSS-Grid-Layout)
+49. [Interactive Course Shopping Cart](Apps/Course-Shopping-Cart/course_shopping_cart.md)
+50. [Migrate an App to VueJS](Apps/Migrate-App-To-VueJS/migrate-an-app-to-vuejs.md)
 
 ## References
 
