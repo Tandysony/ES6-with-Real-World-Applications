@@ -7,7 +7,7 @@
 - Use this [open-source template from Sparksuite](https://github.com/sparksuite/simple-html-invoice-template) as a start
 - Program in both the declarative programming paradigm and imperative programming paradigm
 - User can add new items
-- User can add change an items information
+- User can change an items information
 - Recalculate the prices whenever a user changes an item's unit cost or quantity
 
 #### The implementation is demonstrated bellow
